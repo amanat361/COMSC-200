@@ -8,6 +8,7 @@ int main()
   cout << "Adding a line to main.cpp" << endl;
   cout << "Adding another line to this" << endl;
   cout << "This is commited from atom" << endl;
-  cout << "that didn't work let's try again" << endl;
+  cout << "That didn't work let's try again" << endl;
+  cout << "This is so fun, I figured it out!!!" << endl;
   return 0;
 }
