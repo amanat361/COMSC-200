@@ -1,0 +1,2877 @@
+<!DOCTYPE html>
+<html class="" dir="ltr" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>Q2: 2317 - Object Oriented Progrmng C++</title>
+  <!--[if lte IE 9]> <meta http-equiv=refresh content="0; URL=/ie-9-is-not-supported.html" /> <![endif]-->
+  
+  <link rel="preload" href="https://du11hjcvx0uqb.cloudfront.net/dist/fonts/lato/latin/LatoLatin-Regular-3cd3657802.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="shortcut icon" type="image/x-icon" href="https://instructure-uploads.s3.amazonaws.com/account_77740000000000001/attachments/664/dvc%20logo.png?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&amp;Expires=1932585767&amp;Signature=sntd5eufReojTypUSROGNaBBAe4%3D&amp;response-cache-control=Cache-Control%3Amax-age%3D473364000%2C%20public&amp;response-expires=473364000">
+  <link rel="apple-touch-icon" href="https://du11hjcvx0uqb.cloudfront.net/dist/images/apple-touch-icon-585e5d997d.png">
+  
+  <link rel="stylesheet" media="all" href="Quiz2_files/variables-750d72b9d3e5d522f965bf904110c132.css">
+    <!-- base href="https://dvc.instructure.com/courses/37582/quizzes/89444" -->
+<link rel="stylesheet" media="all" href="Quiz2_files/common-4c466e684e.css">
+  <script type="text/javascript" async="" src="Quiz2_files/ga.js"></script><script>
+//<![CDATA[
+
+!function(){
+  function get(u){document.write('<scr'+'ipt src="'+ u +'"></sc'+'ript>')}
+  var o,s,v;
+  if (!(window.Promise && Object.assign && Object.values && [].find && [].includes && (o={},s=Symbol(),v={},o[s]=v,o[s]===v) && (function f(){}).bind().name==='bound f')) {
+    get("https://du11hjcvx0uqb.cloudfront.net/dist/ie11-polyfill-9d8b3b9e2f.js");
+  }
+  window.fetch || get("https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js");
+}();
+      
+//]]>
+</script>
+  <script src="Quiz2_files/lato-fontfaceobserver-ed903d58c4.js" async="async"></script>
+  
+  <meta name="apple-itunes-app" content="app-id=480883488">
+<link rel="manifest" href="https://dvc.instructure.com/web-app-manifest/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#008EE2">
+  <link rel="stylesheet" media="all" href="Quiz2_files/quizzes-6a462f8d09.css">
+<link rel="stylesheet" media="all" href="Quiz2_files/learning_outcomes-f40ec34c4b.css">
+  
+  <link rel="stylesheet" media="all" href="Quiz2_files/evalkit-css.css">
+  <script>
+    function _earlyClick(e){
+      var c = e.target
+      while (c && c.ownerDocument) {
+        if (c.getAttribute('href') == '#' || c.getAttribute('data-method')) {
+          e.preventDefault()
+          (_earlyClick.clicks = _earlyClick.clicks || []).push(c)
+          break
+        }
+        c = c.parentNode
+      }
+    }
+    document.addEventListener('click', _earlyClick)
+  </script>
+  <script src="Quiz2_files/variables-750d72b9d3e5d522f965bf904110c132.js" defer="defer"></script>
+  <script src="Quiz2_files/vendor.js" defer="defer"></script>
+<script src="Quiz2_files/Los_Angeles-d9cac65c52.js" defer="defer"></script>
+<script src="Quiz2_files/en_US-80a0ce259b.js" defer="defer"></script>
+<script src="Quiz2_files/appBootstrap.js" defer="defer"></script>
+<script src="Quiz2_files/common.js" defer="defer"></script>
+<script src="Quiz2_files/quiz_show.js" defer="defer"></script>
+<script src="Quiz2_files/quiz_submission.js" defer="defer"></script>
+<style type="text/css"></style><style type="text/css">.mejs-offscreen{clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);clip-path:polygon(0px 0,0 0,0 0,0 0);position:absolute!important;height:1px;width:1px;overflow:hidden}.mejs-container{position:relative;background:#000;font-family:Helvetica,Arial,serif;text-align:left;vertical-align:top;text-indent:0}.mejs-fill-container,.mejs-fill-container .mejs-container{width:100%;height:100%}.mejs-fill-container{overflow:hidden}.mejs-container:focus{outline:0}.me-plugin{position:absolute}.mejs-embed,.mejs-embed body{width:100%;height:100%;margin:0;padding:0;background:#000;overflow:hidden}.mejs-fullscreen{overflow:hidden!important}.mejs-container-fullscreen{position:fixed;left:0;top:0;right:0;bottom:0;overflow:hidden;z-index:1000}.mejs-container-fullscreen .mejs-mediaelement,.mejs-container-fullscreen video{width:100%;height:100%}.mejs-clear{clear:both}.mejs-background{position:absolute;top:0;left:0}.mejs-mediaelement{position:absolute;top:0;left:0;width:100%;height:100%}.mejs-poster{position:absolute;top:0;left:0;background-size:contain;background-position:50% 50%;background-repeat:no-repeat}:root .mejs-poster img{display:none}.mejs-poster img{border:0;padding:0}.mejs-overlay{position:absolute;top:0;left:0}.mejs-overlay-play{cursor:pointer}.mejs-overlay-button{position:absolute;top:50%;left:50%;width:100px;height:100px;margin:-50px 0 0 -50px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/746c3af7a145a09239a36e5ef61cfea0.svg) no-repeat}.no-svg .mejs-overlay-button{background-image:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/716436fb3df0d29e6b37dd62d952676a.png)}.mejs-overlay:hover .mejs-overlay-button{background-position:0 -100px}.mejs-overlay-loading{position:absolute;top:50%;left:50%;width:80px;height:80px;margin:-40px 0 0 -40px;background:#333;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(0,0,0,.9);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.9)),to(rgba(0,0,0,.9)));background:-webkit-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-moz-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-o-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:-ms-linear-gradient(top,rgba(50,50,50,.9),rgba(0,0,0,.9));background:linear-gradient(rgba(50,50,50,.9),rgba(0,0,0,.9))}.mejs-overlay-loading span{display:block;width:80px;height:80px;background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/76b326f4d44222126fee21076595bef5.gif) 50% 50% no-repeat}.mejs-container .mejs-controls{position:absolute;list-style-type:none;margin:0;padding:0;bottom:0;left:0;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(0,0,0,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.7)),to(rgba(0,0,0,.7)));background:-webkit-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-moz-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-o-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-ms-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:linear-gradient(rgba(50,50,50,.7),rgba(0,0,0,.7));height:30px;width:100%}.mejs-container .mejs-controls div{list-style-type:none;background-image:none;display:block;float:left;margin:0;padding:0;width:26px;height:26px;font-size:11px;line-height:11px;font-family:Helvetica,Arial,serif;border:0}.mejs-controls .mejs-button button{cursor:pointer;display:block;font-size:0;line-height:0;text-decoration:none;margin:7px 5px;padding:0;position:absolute;height:16px;width:16px;border:0;background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/40f56f5a736da4effeb790cedb8a52f0.svg) no-repeat}.no-svg .mejs-controls .mejs-button button{background-image:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/24a0227fbdd3acfd86ff03fc3fc6c8a4.png)}.mejs-controls .mejs-button button:focus{outline:dotted 1px #999}.mejs-container .mejs-controls .mejs-time{color:#fff;display:block;height:17px;width:auto;padding:10px 3px 0;overflow:hidden;text-align:center;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}.mejs-container .mejs-controls .mejs-time a{color:#fff;font-size:11px;line-height:12px;display:block;float:left;margin:1px 2px 0 0;width:auto}.mejs-controls .mejs-play button{background-position:0 0}.mejs-controls .mejs-pause button{background-position:0 -16px}.mejs-controls .mejs-stop button{background-position:-112px 0}.mejs-controls div.mejs-time-rail{direction:ltr;width:200px;padding-top:5px}.mejs-controls .mejs-time-rail span,.mejs-controls .mejs-time-rail a{display:block;position:absolute;width:180px;height:10px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;cursor:pointer}.mejs-controls .mejs-time-rail .mejs-time-total{margin:5px;background:#333;background:rgba(50,50,50,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(30,30,30,.8)),to(rgba(60,60,60,.8)));background:-webkit-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-moz-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-o-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-ms-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:linear-gradient(rgba(30,30,30,.8),rgba(60,60,60,.8))}.mejs-controls .mejs-time-rail .mejs-time-buffering{width:100%;background-image:-o-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-webkit-gradient(linear,0 100%,100% 0,color-stop(0.25,rgba(255,255,255,.15)),color-stop(0.25,transparent),color-stop(0.5,transparent),color-stop(0.5,rgba(255,255,255,.15)),color-stop(0.75,rgba(255,255,255,.15)),color-stop(0.75,transparent),to(transparent));background-image:-webkit-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-moz-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:-ms-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);background-image:linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);-webkit-background-size:15px 15px;-moz-background-size:15px 15px;-o-background-size:15px 15px;background-size:15px 15px;-webkit-animation:buffering-stripes 2s linear infinite;-moz-animation:buffering-stripes 2s linear infinite;-ms-animation:buffering-stripes 2s linear infinite;-o-animation:buffering-stripes 2s linear infinite;animation:buffering-stripes 2s linear infinite}@-webkit-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-moz-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-ms-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@-o-keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}@keyframes buffering-stripes{from{background-position:0 0}to{background-position:30px 0}}.mejs-controls .mejs-time-rail .mejs-time-loaded{background:#3caac8;background:rgba(60,170,200,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(44,124,145,.8)),to(rgba(78,183,212,.8)));background:-webkit-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-moz-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-o-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:-ms-linear-gradient(top,rgba(44,124,145,.8),rgba(78,183,212,.8));background:linear-gradient(rgba(44,124,145,.8),rgba(78,183,212,.8));width:0}.mejs-controls .mejs-time-rail .mejs-time-current{background:#fff;background:rgba(255,255,255,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,.9)),to(rgba(200,200,200,.8)));background:-webkit-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-moz-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-o-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-ms-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:linear-gradient(rgba(255,255,255,.9),rgba(200,200,200,.8));width:0}.mejs-controls .mejs-time-rail .mejs-time-handle{display:none;position:absolute;margin:0;width:10px;background:#fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;cursor:pointer;border:solid 2px #333;top:-2px;text-align:center}.mejs-controls .mejs-time-rail .mejs-time-float{position:absolute;display:none;background:#eee;width:36px;height:17px;border:solid 1px #333;top:-26px;margin-left:-18px;text-align:center;color:#111}.mejs-controls .mejs-time-rail .mejs-time-float-current{margin:2px;width:30px;display:block;text-align:center;left:0}.mejs-controls .mejs-time-rail .mejs-time-float-corner{position:absolute;display:block;width:0;height:0;line-height:0;border:solid 5px #eee;border-color:#eee transparent transparent;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;top:15px;left:13px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float{width:48px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-current{width:44px}.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-corner{left:18px}.mejs-controls .mejs-fullscreen-button button{background-position:-32px 0}.mejs-controls .mejs-unfullscreen button{background-position:-32px -16px}.mejs-controls .mejs-volume-button{}.mejs-controls .mejs-mute button{background-position:-16px -16px}.mejs-controls .mejs-unmute button{background-position:-16px 0}.mejs-controls .mejs-volume-button{position:relative}.mejs-controls .mejs-volume-button .mejs-volume-slider{height:115px;width:25px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;top:-115px;left:0;z-index:1;position:absolute;margin:0}.mejs-controls .mejs-volume-button:hover{-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total{position:absolute;left:11px;top:8px;width:2px;height:100px;background:#ddd;background:rgba(255,255,255,.5);margin:0}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current{position:absolute;left:11px;top:8px;width:2px;height:100px;background:#ddd;background:rgba(255,255,255,.9);margin:0}.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle{position:absolute;left:4px;top:-3px;width:16px;height:6px;background:#ddd;background:rgba(255,255,255,.9);cursor:N-resize;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;margin:0}.mejs-controls a.mejs-horizontal-volume-slider{height:26px;width:56px;position:relative;display:block;float:left;vertical-align:middle}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total{position:absolute;left:0;top:11px;width:50px;height:8px;margin:0;padding:0;font-size:1px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background:#333;background:rgba(50,50,50,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(30,30,30,.8)),to(rgba(60,60,60,.8)));background:-webkit-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-moz-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-o-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:-ms-linear-gradient(top,rgba(30,30,30,.8),rgba(60,60,60,.8));background:linear-gradient(rgba(30,30,30,.8),rgba(60,60,60,.8))}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current{position:absolute;left:0;top:11px;width:50px;height:8px;margin:0;padding:0;font-size:1px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;background:#fff;background:rgba(255,255,255,.8);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,.9)),to(rgba(200,200,200,.8)));background:-webkit-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-moz-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-o-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:-ms-linear-gradient(top,rgba(255,255,255,.9),rgba(200,200,200,.8));background:linear-gradient(rgba(255,255,255,.9),rgba(200,200,200,.8))}.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle{display:none}.mejs-controls .mejs-captions-button{position:relative}.mejs-controls .mejs-captions-button button{background-position:-48px 0}.mejs-controls .mejs-captions-button .mejs-captions-selector{position:absolute;bottom:26px;right:-51px;width:85px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:10px 10px 0;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-captions-button .mejs-captions-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li{margin:0 0 6px;padding:0;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-captions-button .mejs-captions-selector ul li label{width:55px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:10px}.mejs-controls .mejs-captions-button .mejs-captions-translations{font-size:10px;margin:0 0 5px}.mejs-chapters{position:absolute;top:0;left:0;border-right:solid 1px #fff;width:10000px;z-index:1}.mejs-chapters .mejs-chapter{position:absolute;float:left;background:#222;background:rgba(0,0,0,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(50,50,50,.7)),to(rgba(0,0,0,.7)));background:-webkit-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-moz-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-o-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:-ms-linear-gradient(top,rgba(50,50,50,.7),rgba(0,0,0,.7));background:linear-gradient(rgba(50,50,50,.7),rgba(0,0,0,.7));filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#323232, endColorstr=#000000);overflow:hidden;border:0}.mejs-chapters .mejs-chapter .mejs-chapter-block{font-size:11px;color:#fff;padding:5px;display:block;border-right:solid 1px #333;border-bottom:solid 1px #333;cursor:pointer}.mejs-chapters .mejs-chapter .mejs-chapter-block-last{border-right:0}.mejs-chapters .mejs-chapter .mejs-chapter-block:hover{background:#666;background:rgba(102,102,102,.7);background:-webkit-gradient(linear,0 0,0 100%,from(rgba(102,102,102,.7)),to(rgba(50,50,50,.6)));background:-webkit-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-moz-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-o-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:-ms-linear-gradient(top,rgba(102,102,102,.7),rgba(50,50,50,.6));background:linear-gradient(rgba(102,102,102,.7),rgba(50,50,50,.6));filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#666666, endColorstr=#323232)}.mejs-chapters .mejs-chapter .mejs-chapter-block .ch-title{font-size:12px;font-weight:700;display:block;white-space:nowrap;text-overflow:ellipsis;margin:0 0 3px;line-height:12px}.mejs-chapters .mejs-chapter .mejs-chapter-block .ch-timespan{font-size:12px;line-height:12px;margin:3px 0 4px;display:block;white-space:nowrap;text-overflow:ellipsis}.mejs-captions-layer{position:absolute;bottom:0;left:0;text-align:center;line-height:20px;font-size:16px;color:#fff}.mejs-captions-layer a{color:#fff;text-decoration:underline}.mejs-captions-layer[lang=ar]{font-size:20px;font-weight:400}.mejs-captions-position{position:absolute;width:100%;bottom:15px;left:0}.mejs-captions-position-hover{bottom:35px}.mejs-captions-text,.mejs__captions-text *{padding:0;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(20,20,20,.5);white-space:pre-wrap;-webkit-box-shadow:5px 0 0 rgba(20,20,20,.5),-5px 0 0 rgba(20,20,20,.5);box-shadow:5px 0 0 rgba(20,20,20,.5),-5px 0 0 rgba(20,20,20,.5)}.me-cannotplay{}.me-cannotplay a{color:#fff;font-weight:700}.me-cannotplay span{padding:15px;display:block}.mejs-controls .mejs-loop-off button{background-position:-64px -16px}.mejs-controls .mejs-loop-on button{background-position:-64px 0}.mejs-controls .mejs-backlight-off button{background-position:-80px -16px}.mejs-controls .mejs-backlight-on button{background-position:-80px 0}.mejs-controls .mejs-picturecontrols-button{background-position:-96px 0}.mejs-contextmenu{position:absolute;width:150px;padding:10px;border-radius:4px;top:0;left:0;background:#fff;border:solid 1px #999;z-index:1001}.mejs-contextmenu .mejs-contextmenu-separator{height:1px;font-size:0;margin:5px 6px;background:#333}.mejs-contextmenu .mejs-contextmenu-item{font-family:Helvetica,Arial,serif;font-size:12px;padding:4px 6px;cursor:pointer;color:#333}.mejs-contextmenu .mejs-contextmenu-item:hover{background:#2C7C91;color:#fff}.mejs-controls .mejs-sourcechooser-button{position:relative}.mejs-controls .mejs-sourcechooser-button button{background-position:-128px 0}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector{position:absolute;bottom:26px;right:-10px;width:130px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:10px;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li{margin:0 0 6px;padding:0;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li label{width:100px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:10px}.mejs-postroll-layer{position:absolute;bottom:0;left:0;width:100%;height:100%;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);z-index:1000;overflow:hidden}.mejs-postroll-layer-content{width:100%;height:100%}.mejs-postroll-close{position:absolute;right:0;top:0;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);color:#fff;padding:4px;z-index:100;cursor:pointer}div.mejs-speed-button{width:46px!important;position:relative}.mejs-controls .mejs-button.mejs-speed-button button{background:transparent;width:36px;font-size:11px;line-height:normal;color:#fff}.mejs-controls .mejs-speed-button .mejs-speed-selector{position:absolute;top:-100px;left:-10px;width:60px;height:100px;background:url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/703c659e4bf563a05c6338a1727e006c.png);background:rgba(50,50,50,.7);border:solid 1px transparent;padding:0;overflow:hidden;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li label.mejs-speed-selected{color:rgba(33,248,248,1)}.mejs-controls .mejs-speed-button .mejs-speed-selector ul{margin:0;padding:0;display:block;list-style-type:none!important;overflow:hidden}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li{margin:0 0 6px;padding:0 10px;list-style-type:none!important;display:block;color:#fff;overflow:hidden}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li input{clear:both;float:left;margin:3px 3px 0 5px}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li label{width:60px;float:left;padding:4px 0 0;line-height:15px;font-family:Helvetica,Arial,serif;font-size:11px;color:#fff;margin-left:5px;cursor:pointer}.mejs-controls .mejs-speed-button .mejs-speed-selector ul li:hover{background-color:#c8c8c8!important;background-color:rgba(255,255,255,.4)!important}.mejs-controls .mejs-button.mejs-jump-forward-button{background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/15e1ac8cbacc2efdf1ac2677de48a253.png) no-repeat 3px 3px}.mejs-controls .mejs-button.mejs-jump-forward-button button{background:transparent;font-size:9px;line-height:normal;color:#fff}.mejs-controls .mejs-button.mejs-skip-back-button{background:transparent url(https://du11hjcvx0uqb.cloudfront.net/dist/webpack-production/cd6dc830eb45b3a5a96bbc936ff54846.png) no-repeat 3px 3px}.mejs-controls .mejs-button.mejs-skip-back-button button{background:transparent;font-size:9px;line-height:normal;color:#fff}</style><style type="text/css">/*
+ * Copyright (C) 2014 - present Instructure, Inc.
+ *
+ * This file is part of Canvas.
+ *
+ * Canvas is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU Affero General Public License as published by the Free
+ * Software Foundation, version 3 of the License.
+ *
+ * Canvas is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+ * A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
+ * details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along
+ * with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/* customizations to mediaelementplayer css */
+
+/*
+  Because this file is not proccessed by our brandable_css sass pipeline,
+  it cannot use our sass-direction helpers. So we have to handle RTL manually
+  by putting direction-specific styles in [dir="ltr"] or [dir="rtl"] blocks.
+*/
+/* stylelint-disable property-blacklist, declaration-property-value-blacklist */
+
+/* good menu widths */
+.mejs-sourcechooser-selector {
+  width: 160px;
+}
+.mejs-sourcechooser-selector label {
+  width: 160px !important;
+}
+
+.mejs-captions-selector {
+  width: 105px;
+}
+[dir="ltr"]  .mejs-captions-selector { text-align: left }
+[dir="rtl"]  .mejs-captions-selector { text-align: right }
+
+.mejs-captions-selector label {
+  width: 70px !important;
+}
+
+/* Subtitile upload link */
+.mejs-captions-selector .upload-track {
+  color: white;
+  margin-top: 3px;
+  margin-bottom: 5px;
+}
+[dir="ltr"] .mejs-captions-selector .upload-track {
+  margin-right: 0px;
+  margin-left: 5px;
+  float: left;
+}
+[dir="rtl"] .mejs-captions-selector .upload-track {
+  margin-left: 0px;
+  margin-right: 5px;
+  float: right;
+}
+
+/* "x" button to remove a subtitle */
+.mejs-captions-selector a[data-remove] {
+  position: absolute;
+  top: 0;
+  color: white;
+}
+[dir="ltr"] .mejs-captions-selector a[data-remove] { right: 0 }
+[dir="rtl"] .mejs-captions-selector a[data-remove] { left: 0 }
+
+
+/* style menu items without a radio button */
+.mejs-button [role="menu"] {
+  padding: 0 !important;
+}
+ /* compensate for above 0 padding */
+ .mejs-button [role="menu"] ul li {
+  position: relative;
+  padding: 0 10px !important;
+}
+/* add a hover effect */
+.mejs-button [role="menu"] ul li:hover {
+  background-color: #c8c8c8 !important;
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+.mejs-button [role="menu"] ul li input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+}
+.mejs-button [role="menu"] ul li label {
+  cursor: pointer;
+}
+[dir="ltr"] .mejs-button [role="menu"] ul li label { margin-left: 5px }
+[dir="rtl"] .mejs-button [role="menu"] ul li label { margin-right: 5px }
+
+
+.mejs-button [role="menu"] label.mejs-selected {
+  color: #21f8f8 !important;
+}
+
+/* stylelint-enable property-blacklist, declaration-property-value-blacklist */
+</style><link rel="stylesheet" href="Quiz2_files/messageStudentsDialog-71cf06c9a8.css" data-loaded-by-brandablecss="true"><link rel="stylesheet" href="Quiz2_files/PaginatedView-bf30c3a7d1.css" data-loaded-by-brandablecss="true"><link rel="stylesheet" href="Quiz2_files/KeyboardShortcuts-f4493af988.css" data-loaded-by-brandablecss="true"><script type="text/javascript" charset="utf-8" async="" src="Quiz2_files/CanvasRCEAsyncChunk.js"></script><link rel="stylesheet" href="Quiz2_files/TreeBrowser-d5f73d406a.css" data-loaded-by-brandablecss="true"><link rel="stylesheet" href="Quiz2_files/MoveOutcomeDialog-9d1c3f4686.css" data-loaded-by-brandablecss="true"><style type="text/css" data-glamor=""></style><script type="text/javascript" src="Quiz2_files/ccccd.js"></script><script type="text/javascript" src="Quiz2_files/evalkit_002.js"></script></head>
+
+<body class="with-left-side course-menu-expanded with-right-side padless-content quizzes primary-nav-expanded context-course_37582 lato-font-not-loaded-yet webkit safari ff no-touch">
+
+<noscript>
+  <div role="alert" class="ic-flash-static ic-flash-error">
+    <div class="ic-flash__icon" aria-hidden="true">
+      <i class="icon-warning"></i>
+    </div>
+    <h1>You need to have JavaScript enabled in order to access this site.</h1>
+  </div>
+</noscript>
+
+
+
+
+
+<ul id="flash_message_holder"></ul>
+<div id="flash_screenreader_holder" role="alert" aria-live="assertive" aria-relevant="additions" class="screenreader-only" aria-atomic="false"></div>
+
+<div id="application" class="ic-app">
+  
+  <header id="header" class="ic-app-header no-print ">
+    <a href="#content" id="skip_navigation_link">Skip To Content</a>
+      <div role="region" class="ic-app-header__main-navigation" aria-label="Global Navigation">
+        <div class="ic-app-header__logomark-container">
+          <a href="https://dvc.instructure.com/" class="ic-app-header__logomark">
+            <span class="screenreader-only">Dashboard</span>
+          </a>
+        </div>
+        <ul id="menu" class="ic-app-header__menu-list">
+            <li class="menu-item ic-app-header__menu-list-item ">
+              <a id="global_nav_profile_link" href="https://dvc.instructure.com/profile" class="ic-app-header__menu-list-link">
+                <div class="menu-item-icon-container" aria-hidden="true">
+                  <div class="ic-avatar ">
+                    <img src="Quiz2_files/download.jpg" alt="Samin Amanat">
+                  </div>
+                </div>
+                <div class="menu-item__text">
+                  Account
+                </div>
+              </a>
+            </li>
+          <li class="ic-app-header__menu-list-item ">
+            <a id="global_nav_dashboard_link" href="https://dvc.instructure.com/" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--dashboard" version="1.1" x="0" y="0" viewBox="0 0 280 200" enable-background="new 0 0 280 200" xml:space="preserve"><path d="M273.09,180.75H197.47V164.47h62.62A122.16,122.16,0,1,0,17.85,142a124,124,0,0,0,2,22.51H90.18v16.29H6.89l-1.5-6.22A138.51,138.51,0,0,1,1.57,142C1.57,65.64,63.67,3.53,140,3.53S278.43,65.64,278.43,142a137.67,137.67,0,0,1-3.84,32.57ZM66.49,87.63,50.24,71.38,61.75,59.86,78,76.12Zm147,0L202,76.12l16.25-16.25,11.51,11.51ZM131.85,53.82v-23h16.29v23Zm15.63,142.3a31.71,31.71,0,0,1-28-16.81c-6.4-12.08-15.73-72.29-17.54-84.25a8.15,8.15,0,0,1,13.58-7.2c8.88,8.21,53.48,49.72,59.88,61.81a31.61,31.61,0,0,1-27.9,46.45ZM121.81,116.2c4.17,24.56,9.23,50.21,12,55.49A15.35,15.35,0,1,0,161,157.3C158.18,152,139.79,133.44,121.81,116.2Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">Dashboard</div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ic-app-header__menu-list-item--active">
+            <a id="global_nav_courses_link" href="https://dvc.instructure.com/courses" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--courses" version="1.1" x="0" y="0" viewBox="0 0 280 259" enable-background="new 0 0 280 259" xml:space="preserve"><path d="M73.31,198c-11.93,0-22.22,8-24,18.73a26.67,26.67,0,0,0-.3,3.63v.3a22,22,0,0,0,5.44,14.65,22.47,22.47,0,0,0,17.22,8H200V228.19h-134V213.08H200V198Zm21-105.74h90.64V62H94.3ZM79.19,107.34V46.92H200v60.42Zm7.55,30.21V122.45H192.49v15.11ZM71.65,16.71A22.72,22.72,0,0,0,49,39.36V190.88a41.12,41.12,0,0,1,24.32-8h157V16.71ZM33.88,39.36A37.78,37.78,0,0,1,71.65,1.6H245.36V198H215.15v45.32h22.66V258.4H71.65a37.85,37.85,0,0,1-37.76-37.76Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Courses
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_calendar_link" href="https://dvc.instructure.com/calendar" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--calendar" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M197.07,213.38h16.31V197.07H197.07Zm-16.31,16.31V180.76h48.92v48.92Zm-48.92-16.31h16.31V197.07H131.85Zm-16.31,16.31V180.76h48.92v48.92ZM66.62,213.38H82.93V197.07H66.62ZM50.32,229.68V180.76H99.24v48.92Zm146.75-81.53h16.31V131.85H197.07Zm-16.31,16.31V115.54h48.92v48.92Zm-48.92-16.31h16.31V131.85H131.85Zm-16.31,16.31V115.54h48.92v48.92ZM66.62,148.15H82.93V131.85H66.62ZM50.32,164.46V115.54H99.24v48.92ZM34,262.29H246V82.93H34ZM246,66.62V42.16A8.17,8.17,0,0,0,237.84,34H213.38v8.15a8.15,8.15,0,1,1-16.31,0V34H82.93v8.15a8.15,8.15,0,0,1-16.31,0V34H42.16A8.17,8.17,0,0,0,34,42.16V66.62Zm-8.15-48.92a24.49,24.49,0,0,1,24.46,24.46V278.6H17.71V42.16A24.49,24.49,0,0,1,42.16,17.71H66.62V9.55a8.15,8.15,0,0,1,16.31,0v8.15H197.07V9.55a8.15,8.15,0,1,1,16.31,0v8.15Z"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Calendar
+              </div>
+            </a>
+          </li>
+          <li class="menu-item ic-app-header__menu-list-item ">
+            <a id="global_nav_conversations_link" href="https://dvc.instructure.com/conversations" class="ic-app-header__menu-list-link">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--inbox" version="1.1" x="0" y="0" viewBox="0 0 280 280" enable-background="new 0 0 280 280" xml:space="preserve"><path d="M91.72,120.75h96.56V104.65H91.72Zm0,48.28h80.47V152.94H91.72Zm0-96.56h80.47V56.37H91.72Zm160.94,34.88H228.52V10.78h-177v96.56H27.34A24.17,24.17,0,0,0,3.2,131.48V244.14a24.17,24.17,0,0,0,24.14,24.14H252.66a24.17,24.17,0,0,0,24.14-24.14V131.48A24.17,24.17,0,0,0,252.66,107.34Zm0,16.09a8.06,8.06,0,0,1,8,8v51.77l-32.19,19.31V123.44ZM67.58,203.91v-177H212.42v177ZM27.34,123.44H51.48v79.13L19.29,183.26V131.48A8.06,8.06,0,0,1,27.34,123.44ZM252.66,252.19H27.34a8.06,8.06,0,0,1-8-8V202l30,18H230.75l30-18v42.12A8.06,8.06,0,0,1,252.66,252.19Z"></path></svg>
+
+                <span class="menu-item__badge" style="">1</span>
+              </div>
+              <div class="menu-item__text">
+                Inbox
+              </div>
+            </a>
+          </li>
+            
+
+
+          <li class="ic-app-header__menu-list-item">
+           <a id="global_nav_help_link" class="ic-app-header__menu-list-link" data-track-category="help system" data-track-label="help button" href="http://help.instructure.com/">
+              <div class="menu-item-icon-container" role="presentation">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg menu-item__icon svg-icon-help" version="1.1" x="0" y="0" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve" fill="currentColor"><path d="M100,127.88A11.15,11.15,0,1,0,111.16,139,11.16,11.16,0,0,0,100,127.88Zm8.82-88.08a33.19,33.19,0,0,1,23.5,23.5,33.54,33.54,0,0,1-24,41.23,3.4,3.4,0,0,0-2.74,3.15v9.06H94.42v-9.06a14.57,14.57,0,0,1,11.13-14,22.43,22.43,0,0,0,13.66-10.27,22.73,22.73,0,0,0,2.31-17.37A21.92,21.92,0,0,0,106,50.59a22.67,22.67,0,0,0-19.68,3.88,22.18,22.18,0,0,0-8.65,17.64H66.54a33.25,33.25,0,0,1,13-26.47A33.72,33.72,0,0,1,108.82,39.8ZM100,5.2A94.8,94.8,0,1,0,194.8,100,94.91,94.91,0,0,0,100,5.2m0,178.45A83.65,83.65,0,1,1,183.65,100,83.73,83.73,0,0,1,100,183.65" transform="translate(-5.2 -5.2)"></path></svg>
+
+              </div>
+              <div class="menu-item__text">
+                Help
+              </div>
+</a>          </li>
+        </ul>
+      </div>
+      <div class="ic-app-header__secondary-navigation">
+        <ul class="ic-app-header__menu-list">
+          <li class="menu-item ic-app-header__menu-list-item">
+            <button id="primaryNavToggle" class="ic-app-header__menu-list-link ic-app-header__menu-list-link--nav-toggle" aria-label="Minimize global navigation" title="Minimize global navigation">
+              <div class="menu-item-icon-container" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ic-icon-svg ic-icon-svg--navtoggle" version="1.1" x="0" y="0" width="40" height="32" viewBox="0 0 40 32" xml:space="preserve">
+  <path d="M39.5,30.28V2.48H37.18v27.8Zm-4.93-13.9L22.17,4,20.53,5.61l9.61,9.61H.5v2.31H30.14l-9.61,9.61,1.64,1.64Z"></path>
+</svg>
+
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+    <div id="global_nav_tray_container"></div>
+  </header>
+
+
+  <div id="instructure_ajax_error_box">
+    <div style="text-align: right; background-color: #fff;"><a href="#" class="close_instructure_ajax_error_box_link">Close</a></div>
+    <iframe id="instructure_ajax_error_result" src="Quiz2_files/a.html" style="border: 0;" title="Error"></iframe>
+  </div>
+
+  
+
+  <div id="wrapper" class="ic-Layout-wrapper">
+      <div class="ic-app-nav-toggle-and-crumbs no-print">
+          <button type="button" id="courseMenuToggle" class="Button Button--link ic-app-course-nav-toggle" aria-live="polite" aria-label="Hide Courses Navigation Menu" title="Hide Courses Navigation Menu">
+            <i class="icon-hamburger" aria-hidden="true"></i>
+          </button>
+          <div class="ic-app-crumbs">
+        <nav id="breadcrumbs" role="navigation" aria-label="breadcrumbs"><ul><li class="home"><a href="https://dvc.instructure.com/"><span class="ellipsible">      <i class="icon-home" title="My Dashboard">
+        <span class="screenreader-only">My Dashboard</span>
+      </i>
+</span></a></li><li><a href="https://dvc.instructure.com/courses/37582"><span class="ellipsible">Programming</span></a></li><li><a href="https://dvc.instructure.com/courses/37582/quizzes"><span class="ellipsible">Quizzes</span></a></li><li><a href="https://dvc.instructure.com/courses/37582/quizzes/89444"><span class="ellipsible">Q2</span></a></li></ul></nav>
+        </div>
+      </div>
+    <div id="main" class="ic-Layout-columns">
+        <div class="ic-Layout-watermark"></div>
+        <div id="left-side" class="ic-app-course-menu list-view" style="display: block">
+              <span id="section-tabs-header-subtitle" class="ellipsis">Spring 2019</span>
+            <nav role="navigation" aria-label="Courses Navigation Menu"><ul id="section-tabs"><li class="section"><a href="https://dvc.instructure.com/courses/37582" title="Home" class="home" tabindex="0">Home</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/announcements" title="Announcements" class="announcements" tabindex="0">Announcements</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/assignments" title="Assignments" class="assignments" tabindex="0">Assignments</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/discussion_topics" title="Discussions" class="discussions" tabindex="0">Discussions</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/grades" title="Grades" class="grades" tabindex="0">Grades<b class="nav-badge">1</b></a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/users" title="People" class="people" tabindex="0">People</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/files" title="Files" class="files" tabindex="0">Files</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/assignments/syllabus" title="Syllabus" class="syllabus" tabindex="0">Syllabus</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/quizzes" title="Quizzes" class="quizzes active" tabindex="0">Quizzes</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/modules" title="Modules" class="modules" tabindex="0">Modules</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/conferences" title="Conferences" class="conferences" tabindex="0">Conferences</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/collaborations" title="Collaborations" class="collaborations" tabindex="0">Collaborations</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/external_tools/2" title="Chat" class="context_external_tool_2" tabindex="0">Chat</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/external_tools/156" title="DVC Student Services" class="context_external_tool_156" tabindex="0">DVC Student Services</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/external_tools/180" title=" McGraw Hill Campus - Use tool: MH Campus" class="context_external_tool_180" tabindex="0"> McGraw Hill Campus - Use tool: MH Campus</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/external_tools/3854" title="Office 365" class="context_external_tool_3854" tabindex="0">Office 365</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/external_tools/5144" title="DVC Library" class="context_external_tool_5144" tabindex="0">DVC Library</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/external_tools/5473?display=borderless" title="NetTutor" class="context_external_tool_5473" target="_blank" tabindex="0">NetTutor</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/external_tools/5822" title="Starfish" class="context_external_tool_5822" tabindex="0">Starfish</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/external_tools/5886" title="DVC Sync" class="context_external_tool_5886" tabindex="0">DVC Sync</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/external_tools/8056" title="ConferZoom" class="context_external_tool_8056" tabindex="0">ConferZoom</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/external_tools/8069" title="Google Drive" class="context_external_tool_8069" tabindex="0">Google Drive</a></li><li class="section"><a href="https://dvc.instructure.com/courses/37582/external_tools/11310" title="Evaluate Your Professor" class="context_external_tool_11310" tabindex="0">Evaluate Your Professor</a></li></ul></nav>
+        </div>
+      <div id="not_right_side" class="ic-app-main-content">
+        <div id="content-wrapper" class="ic-Layout-contentWrapper">
+          
+          <div id="content" class="ic-Layout-contentMain" role="main">
+            
+
+
+
+
+
+<div id="quiz_show">
+
+  <header class="quiz-header">
+
+
+    <h1 id="quiz_title">
+      Q2
+    </h1>
+
+
+    <div class="row-fluid">
+        <div id="quiz_details_wrapper" data-submitted-count=""></div>
+    </div>
+    <div class="row-fluid">
+        
+
+<ul id="quiz_student_details">
+  <li>
+    <span class="title">Due</span>
+    <span class="value">
+        <span data-tooltip="" data-html-tooltip-title="Feb 6 at 11:59pm">
+          Feb 6 at 11:59pm
+        </span>
+    </span>
+  </li>
+
+  <li style="">
+    <span class="title">Points</span>
+    <span class="value">12</span>
+  </li>
+
+  <li>
+    <span class="title">Questions</span>
+    <span class="value">12</span>
+  </li>
+  
+  <li>
+    <span class="title">Available</span>
+    <span class="value">
+        Feb 2 at 11:01pm - Feb 6 at 11:59pm
+        <span style="font-size: 0.8em;">4 days</span>
+    </span>
+  </li>
+
+  <li>
+    <span class="title">Time Limit</span>
+    <span class="value">
+        None
+    </span>
+  </li>
+
+
+</ul>
+
+
+
+    </div>
+
+
+    <div id="quiz-submission-version-table" style="height: auto; opacity: 1; display: block;">
+  <div class="desc">
+    <h3>Attempt History</h3>
+  </div>
+  <table class="ic-Table ic-Table--condensed" summary="A table that shows your quiz attempt history. Each attempt is on the left side. The attempt, time, and score are across the top.">
+    <thead>
+      <tr>
+        <td></td>
+        <th scope="col">Attempt</th>
+        <th scope="col">Time</th>
+        <th scope="col">Score</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+        
+<tr class="">
+  <th scope="row" class="ic-Table--header-row">
+      LATEST
+  </th>
+  <td>
+    <a href="https://dvc.instructure.com/courses/37582/quizzes/89444/history?version=1">
+      Attempt 1
+    </a>
+  </td>
+  <td>
+    7 minutes
+  </td>
+
+    <td>
+      10 out of 12
+      
+    </td>
+</tr>
+
+    </tbody>
+  </table>
+
+</div>
+
+  </header>
+
+    
+  
+<div class="quiz-submission ">
+
+
+<div class="quiz_score" style="">
+    Score for this quiz:
+  <span class="score_value">10</span> out of 12
+  
+    </div>
+<div>
+  Submitted Feb 5 at  9:29pm
+</div>
+<div class="quiz_duration" style="">
+  This attempt took 7 minutes.
+</div>
+<div id="questions" class="assessment_results  show_correct_answers">
+  
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_1766253"></a>
+  <div class="display_question question true_false_question   incorrect" id="question_1766253">
+    
+<div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 1</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                0
+          <span class="points question_points"> / 1</span> pts
+        </div>
+    </span>
+    </div>
+      <div class="links" style="display: none;">
+        <a href="#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+          <a href="#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+      </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">true_false_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://dvc.instructure.com/courses/37582/quizzes/89444/questions/1766253" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">3742624</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">&lt;p&gt;A pointer is a variable holding an address and its value has to be initialized when it is first declared.&lt;/p&gt;</textarea>
+      </div>
+      <div id="question_1766253_question_text" class="question_text user_content enhanced">
+          <p>A pointer is a variable holding an address and its value has to be initialized when it is first declared.</p>
+      </div>
+      <div class="answers">
+                <div class="answers_wrapper">
+                  
+    <div class="answer answer_for_
+         
+         
+         wrong_answer
+         
+         selected_answer " id="answer_65" style="" title="True. You selected this answer."><span class="answer_arrow incorrect" style="left: -128px; top: 5px;" id="answer_65_arrow">You Answered</span>
+
+
+      <span class="hidden id">65</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-65" name="question-1766253" type="radio" checked="checked" class="question_input" aria-disabled="true" disabled="disabled" aria-describedby="answer_65_arrow">&nbsp;
+      <label for="answer-65">
+        <div class="answer_text">True</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 38px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="True">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">True</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">65</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">0</span>
+      <div class="quiz_comment empty">
+        <div class="answer_comment"></div>
+        <div class="answer_comment_html"></div>
+      </div>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+    <div class="answer answer_for_
+         
+         
+         
+         
+          correct_answer" id="answer_1319" style="" title="False. This was the correct answer."><span class="answer_arrow info" style="left: -128px; top: 5px;" id="answer_1319_arrow">Correct Answer</span>
+
+
+      <span class="hidden id">1319</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-1319" name="question-1766253" type="radio" class="question_input" aria-disabled="true" disabled="disabled" aria-describedby="answer_1319_arrow">&nbsp;
+      <label for="answer-1319">
+        <div class="answer_text">False</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 47.5px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="False">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">False</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">1319</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_1766254"></a>
+  <div class="display_question question true_false_question  correct   " id="question_1766254">
+    
+<div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 2</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                1
+          <span class="points question_points"> / 1</span> pts
+        </div>
+    </span>
+    </div>
+      <div class="links" style="display: none;">
+        <a href="#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+          <a href="#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+      </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">true_false_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://dvc.instructure.com/courses/37582/quizzes/89444/questions/1766254" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">3742625</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">&lt;p&gt;The symbol “*” can be used as an operator to get the address of a variable.&lt;/p&gt;</textarea>
+      </div>
+      <div id="question_1766254_question_text" class="question_text user_content enhanced">
+          <p>The symbol “*” can be used as an operator to get the address of a variable.</p>
+      </div>
+      <div class="answers">
+                <div class="answers_wrapper">
+                  
+    <div class="answer answer_for_
+         
+         
+         
+         
+          " id="answer_5455" style="" title="True.">
+
+
+      <span class="hidden id">5455</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-5455" name="question-1766254" type="radio" class="question_input" aria-disabled="true" disabled="disabled">&nbsp;
+      <label for="answer-5455">
+        <div class="answer_text">True</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 38px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="True">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">True</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">5455</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">0</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+    <div class="answer answer_for_
+         
+         
+         
+         
+         selected_answer correct_answer" id="answer_9289" style="" title="False. You selected this answer. This was the correct answer."><span class="answer_arrow correct" style="left: -128px; top: 5px;" id="answer_9289_arrow">Correct!</span>
+
+
+      <span class="hidden id">9289</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-9289" name="question-1766254" type="radio" checked="checked" class="question_input" aria-disabled="true" disabled="disabled" aria-describedby="answer_9289_arrow">&nbsp;
+      <label for="answer-9289">
+        <div class="answer_text">False</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 47.5px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="False">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">False</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">9289</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+      <div class="quiz_comment empty">
+        <div class="answer_comment"></div>
+        <div class="answer_comment_html"></div>
+      </div>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_1766255"></a>
+  <div class="display_question question true_false_question   incorrect" id="question_1766255">
+    
+<div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 3</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                0
+          <span class="points question_points"> / 1</span> pts
+        </div>
+    </span>
+    </div>
+      <div class="links" style="display: none;">
+        <a href="#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+          <a href="#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+      </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">true_false_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://dvc.instructure.com/courses/37582/quizzes/89444/questions/1766255" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">3742626</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">&lt;p&gt;After a pointer is declared, it can point to various data types, such as int, string and char.&lt;/p&gt;</textarea>
+      </div>
+      <div id="question_1766255_question_text" class="question_text user_content enhanced">
+          <p>After a pointer is declared, it can point to various data types, such as int, string and char.</p>
+      </div>
+      <div class="answers">
+                <div class="answers_wrapper">
+                  
+    <div class="answer answer_for_
+         
+         
+         wrong_answer
+         
+         selected_answer " id="answer_4183" style="" title="True. You selected this answer."><span class="answer_arrow incorrect" style="left: -128px; top: 5px;" id="answer_4183_arrow">You Answered</span>
+
+
+      <span class="hidden id">4183</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-4183" name="question-1766255" type="radio" checked="checked" class="question_input" aria-disabled="true" disabled="disabled" aria-describedby="answer_4183_arrow">&nbsp;
+      <label for="answer-4183">
+        <div class="answer_text">True</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 38px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="True">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">True</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">4183</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">0</span>
+      <div class="quiz_comment empty">
+        <div class="answer_comment"></div>
+        <div class="answer_comment_html"></div>
+      </div>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+    <div class="answer answer_for_
+         
+         
+         
+         
+          correct_answer" id="answer_7409" style="" title="False. This was the correct answer."><span class="answer_arrow info" style="left: -128px; top: 5px;" id="answer_7409_arrow">Correct Answer</span>
+
+
+      <span class="hidden id">7409</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-7409" name="question-1766255" type="radio" class="question_input" aria-disabled="true" disabled="disabled" aria-describedby="answer_7409_arrow">&nbsp;
+      <label for="answer-7409">
+        <div class="answer_text">False</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 47.5px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="False">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">False</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">7409</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_1766256"></a>
+  <div class="display_question question true_false_question  correct   " id="question_1766256">
+    
+<div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 4</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                1
+          <span class="points question_points"> / 1</span> pts
+        </div>
+    </span>
+    </div>
+      <div class="links" style="display: none;">
+        <a href="#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+          <a href="#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+      </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">true_false_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://dvc.instructure.com/courses/37582/quizzes/89444/questions/1766256" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">3742627</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">&lt;p&gt;If
+ the address of ii is 0x1122cc, the&nbsp; 4 lines of code 
+below&lt;/p&gt;
+&lt;p&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ int *pp = nullptr;&lt;/p&gt;
+&lt;p&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ int ii = 0;&lt;/p&gt;
+&lt;p&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ pp = &amp;amp;ii;&lt;/p&gt;
+&lt;p&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ cout &amp;lt;&amp;lt; "pp: ” &amp;lt;&amp;lt; pp &amp;lt;&amp;lt; 
+endl;&lt;/p&gt;
+&lt;p&gt;&nbsp;&lt;/p&gt;
+&lt;p&gt;will display&lt;/p&gt;
+&lt;p&gt;&nbsp;&lt;/p&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td width="358"&gt;
+&lt;p&gt;pp: 0&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&nbsp;&lt;/p&gt;</textarea>
+      </div>
+      <div id="question_1766256_question_text" class="question_text user_content enhanced">
+          <p>If the address of ii is 0x1122cc, the&nbsp; 4 lines of code below</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int *pp = nullptr;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int ii = 0;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pp = &amp;ii;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; "pp: ” &lt;&lt; pp &lt;&lt; endl;</p>
+<p>&nbsp;</p>
+<p>will display</p>
+<p>&nbsp;</p>
+<table>
+<tbody>
+<tr>
+<td width="358">
+<p>pp: 0</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+      </div>
+      <div class="answers">
+                <div class="answers_wrapper">
+                  
+    <div class="answer answer_for_
+         
+         
+         
+         
+          " id="answer_3663" style="" title="True.">
+
+
+      <span class="hidden id">3663</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-3663" name="question-1766256" type="radio" class="question_input" aria-disabled="true" disabled="disabled">&nbsp;
+      <label for="answer-3663">
+        <div class="answer_text">True</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 38px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="True">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">True</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">3663</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">0</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+    <div class="answer answer_for_
+         
+         
+         
+         
+         selected_answer correct_answer" id="answer_9481" style="" title="False. You selected this answer. This was the correct answer."><span class="answer_arrow correct" style="left: -128px; top: 5px;" id="answer_9481_arrow">Correct!</span>
+
+
+      <span class="hidden id">9481</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-9481" name="question-1766256" type="radio" checked="checked" class="question_input" aria-disabled="true" disabled="disabled" aria-describedby="answer_9481_arrow">&nbsp;
+      <label for="answer-9481">
+        <div class="answer_text">False</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 47.5px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="False">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">False</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">9481</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+      <div class="quiz_comment empty">
+        <div class="answer_comment"></div>
+        <div class="answer_comment_html"></div>
+      </div>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_1766257"></a>
+  <div class="display_question question true_false_question  correct" id="question_1766257">
+    
+<div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 5</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                1
+          <span class="points question_points"> / 1</span> pts
+        </div>
+    </span>
+    </div>
+      <div class="links" style="display: none;">
+        <a href="#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+          <a href="#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+      </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">true_false_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://dvc.instructure.com/courses/37582/quizzes/89444/questions/1766257" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">3742628</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">&lt;p&gt;When a reference is declared, a memory block is created to store the data.&lt;/p&gt;</textarea>
+      </div>
+      <div id="question_1766257_question_text" class="question_text user_content enhanced">
+          <p>When a reference is declared, a memory block is created to store the data.</p>
+      </div>
+      <div class="answers">
+                <div class="answers_wrapper">
+                  
+    <div class="answer answer_for_
+         
+         
+         
+         
+          " id="answer_3488" style="" title="True.">
+
+
+      <span class="hidden id">3488</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-3488" name="question-1766257" type="radio" class="question_input" aria-disabled="true" disabled="disabled">&nbsp;
+      <label for="answer-3488">
+        <div class="answer_text">True</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 38px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="True">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">True</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">3488</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">0</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+    <div class="answer answer_for_
+         
+         
+         
+         
+         selected_answer correct_answer" id="answer_6433" style="" title="False. You selected this answer. This was the correct answer."><span class="answer_arrow correct" style="left: -128px; top: 5px;" id="answer_6433_arrow">Correct!</span>
+
+
+      <span class="hidden id">6433</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-6433" name="question-1766257" type="radio" checked="checked" class="question_input" aria-disabled="true" disabled="disabled" aria-describedby="answer_6433_arrow">&nbsp;
+      <label for="answer-6433">
+        <div class="answer_text">False</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 47.5px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="False">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">False</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">6433</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+      <div class="quiz_comment empty">
+        <div class="answer_comment"></div>
+        <div class="answer_comment_html"></div>
+      </div>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_1766258"></a>
+  <div class="display_question question true_false_question  correct" id="question_1766258">
+    
+<div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 6</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                1
+          <span class="points question_points"> / 1</span> pts
+        </div>
+    </span>
+    </div>
+      <div class="links" style="display: none;">
+        <a href="#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+          <a href="#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+      </div>
+    <div style="display: none;">
+      <span class="regrade_option">current_correct_only</span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">true_false_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://dvc.instructure.com/courses/37582/quizzes/89444/questions/1766258" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">3742629</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">&lt;p&gt;A reference must be initialized when it is first declared.&lt;/p&gt;</textarea>
+      </div>
+      <div id="question_1766258_question_text" class="question_text user_content enhanced">
+          <p>A reference must be initialized when it is first declared.</p>
+      </div>
+      <div class="answers">
+                <div class="answers_wrapper">
+                  
+    <div class="answer answer_for_
+         
+         
+         
+         
+         selected_answer correct_answer" id="answer_4154" style="" title="True. You selected this answer. This was the correct answer."><span class="answer_arrow correct" style="left: -128px; top: 5px;" id="answer_4154_arrow">Correct!</span>
+
+
+      <span class="hidden id">4154</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-4154" name="question-1766258" type="radio" checked="checked" class="question_input" aria-disabled="true" disabled="disabled" aria-describedby="answer_4154_arrow">&nbsp;
+      <label for="answer-4154">
+        <div class="answer_text">True</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 38px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="True">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">True</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">4154</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+      <div class="quiz_comment empty">
+        <div class="answer_comment"></div>
+        <div class="answer_comment_html"></div>
+      </div>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+    <div class="answer answer_for_
+         
+         
+         
+         
+          " id="answer_7535" style="" title="False.">
+
+
+      <span class="hidden id">7535</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-7535" name="question-1766258" type="radio" class="question_input" aria-disabled="true" disabled="disabled">&nbsp;
+      <label for="answer-7535">
+        <div class="answer_text">False</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 47.5px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="False">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">False</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">7535</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">0</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_1766259"></a>
+  <div class="display_question question true_false_question  correct   " id="question_1766259">
+    
+<div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 7</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                1
+          <span class="points question_points"> / 1</span> pts
+        </div>
+    </span>
+    </div>
+      <div class="links" style="display: none;">
+        <a href="#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+          <a href="#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+      </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">true_false_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://dvc.instructure.com/courses/37582/quizzes/89444/questions/1766259" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">3742630</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">&lt;p&gt;The value of a reference can be reassigned.&lt;/p&gt;</textarea>
+      </div>
+      <div id="question_1766259_question_text" class="question_text user_content enhanced">
+          <p>The value of a reference can be reassigned.</p>
+      </div>
+      <div class="answers">
+                <div class="answers_wrapper">
+                  
+    <div class="answer answer_for_
+         
+         
+         
+         
+          " id="answer_5938" style="" title="True.">
+
+
+      <span class="hidden id">5938</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-5938" name="question-1766259" type="radio" class="question_input" aria-disabled="true" disabled="disabled">&nbsp;
+      <label for="answer-5938">
+        <div class="answer_text">True</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 38px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="True">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">True</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">5938</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">0</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+    <div class="answer answer_for_
+         
+         
+         
+         
+         selected_answer correct_answer" id="answer_6059" style="" title="False. You selected this answer. This was the correct answer."><span class="answer_arrow correct" style="left: -128px; top: 5px;" id="answer_6059_arrow">Correct!</span>
+
+
+      <span class="hidden id">6059</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-6059" name="question-1766259" type="radio" checked="checked" class="question_input" aria-disabled="true" disabled="disabled" aria-describedby="answer_6059_arrow">&nbsp;
+      <label for="answer-6059">
+        <div class="answer_text">False</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 47.5px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="False">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">False</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">6059</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+      <div class="quiz_comment empty">
+        <div class="answer_comment"></div>
+        <div class="answer_comment_html"></div>
+      </div>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_1766260"></a>
+  <div class="display_question question true_false_question  correct" id="question_1766260">
+    
+<div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 8</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                1
+          <span class="points question_points"> / 1</span> pts
+        </div>
+    </span>
+    </div>
+      <div class="links" style="display: none;">
+        <a href="#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+          <a href="#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+      </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">true_false_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://dvc.instructure.com/courses/37582/quizzes/89444/questions/1766260" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">3742631</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">&lt;p&gt;After the code below is executed, the value of (*p) is the address of y.&lt;/p&gt;
+&lt;p&gt;&nbsp;&lt;/p&gt;
+&lt;p&gt;int y = 4;&lt;/p&gt;
+&lt;p&gt;int * p = &amp;amp;y;&lt;/p&gt;</textarea>
+      </div>
+      <div id="question_1766260_question_text" class="question_text user_content enhanced">
+          <p>After the code below is executed, the value of (*p) is the address of y.</p>
+<p>&nbsp;</p>
+<p>int y = 4;</p>
+<p>int * p = &amp;y;</p>
+      </div>
+      <div class="answers">
+                <div class="answers_wrapper">
+                  
+    <div class="answer answer_for_
+         
+         
+         
+         
+          " id="answer_2588" style="" title="True.">
+
+
+      <span class="hidden id">2588</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-2588" name="question-1766260" type="radio" class="question_input" aria-disabled="true" disabled="disabled">&nbsp;
+      <label for="answer-2588">
+        <div class="answer_text">True</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 38px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="True">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">True</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">2588</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">0</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+    <div class="answer answer_for_
+         
+         
+         
+         
+         selected_answer correct_answer" id="answer_123" style="" title="False. You selected this answer. This was the correct answer."><span class="answer_arrow correct" style="left: -128px; top: 5px;" id="answer_123_arrow">Correct!</span>
+
+
+      <span class="hidden id">123</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-123" name="question-1766260" type="radio" checked="checked" class="question_input" aria-disabled="true" disabled="disabled" aria-describedby="answer_123_arrow">&nbsp;
+      <label for="answer-123">
+        <div class="answer_text">False</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 47.5px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="False">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">False</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">123</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+      <div class="quiz_comment empty">
+        <div class="answer_comment"></div>
+        <div class="answer_comment_html"></div>
+      </div>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_1766261"></a>
+  <div class="display_question question true_false_question  correct   " id="question_1766261">
+    
+<div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 9</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                1
+          <span class="points question_points"> / 1</span> pts
+        </div>
+    </span>
+    </div>
+      <div class="links" style="display: none;">
+        <a href="#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+          <a href="#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+      </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">true_false_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://dvc.instructure.com/courses/37582/quizzes/89444/questions/1766261" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">3742632</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">&lt;p&gt;If
+ the address of the array arr is 0x112200, the code below &lt;/p&gt;
+&lt;p&gt;&nbsp;&lt;/p&gt;
+&lt;p&gt;&nbsp;&nbsp; &nbsp;const int SIZE = 3;&lt;/p&gt;
+&lt;p&gt;&nbsp;&nbsp;&nbsp; int arr[SIZE] = {3, 5, 9};&lt;/p&gt;
+&lt;p&gt;&nbsp;&nbsp;&nbsp; cout &amp;lt;&amp;lt; endl &amp;lt;&amp;lt; 
+"Part 2" &amp;lt;&amp;lt; endl;&lt;/p&gt;
+&lt;p&gt;&nbsp;&nbsp;&nbsp; for (int i = 0; i &amp;lt; SIZE; 
+i++)&lt;/p&gt;
+&lt;p&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ cout &amp;lt;&amp;lt; *arr+i &amp;lt;&amp;lt; "**";&lt;/p&gt;
+&lt;p&gt;&nbsp;&lt;/p&gt;
+&lt;p&gt;will display&lt;/p&gt;
+&lt;p&gt;3**5**9**&lt;/p&gt;</textarea>
+      </div>
+      <div id="question_1766261_question_text" class="question_text user_content enhanced">
+          <p>If the address of the array arr is 0x112200, the code below </p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp; &nbsp;const int SIZE = 3;</p>
+<p>&nbsp;&nbsp;&nbsp; int arr[SIZE] = {3, 5, 9};</p>
+<p>&nbsp;&nbsp;&nbsp; cout &lt;&lt; endl &lt;&lt; "Part 2" &lt;&lt; endl;</p>
+<p>&nbsp;&nbsp;&nbsp; for (int i = 0; i &lt; SIZE; i++)</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; *arr+i &lt;&lt; "**";</p>
+<p>&nbsp;</p>
+<p>will display</p>
+<p>3**5**9**</p>
+      </div>
+      <div class="answers">
+                <div class="answers_wrapper">
+                  
+    <div class="answer answer_for_
+         
+         
+         
+         
+          " id="answer_2869" style="" title="True.">
+
+
+      <span class="hidden id">2869</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-2869" name="question-1766261" type="radio" class="question_input" aria-disabled="true" disabled="disabled">&nbsp;
+      <label for="answer-2869">
+        <div class="answer_text">True</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 38px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="True">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">True</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">2869</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">0</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+    <div class="answer answer_for_
+         
+         
+         
+         
+         selected_answer correct_answer" id="answer_9734" style="" title="False. You selected this answer. This was the correct answer."><span class="answer_arrow correct" style="left: -128px; top: 5px;" id="answer_9734_arrow">Correct!</span>
+
+
+      <span class="hidden id">9734</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-9734" name="question-1766261" type="radio" checked="checked" class="question_input" aria-disabled="true" disabled="disabled" aria-describedby="answer_9734_arrow">&nbsp;
+      <label for="answer-9734">
+        <div class="answer_text">False</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 47.5px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="False">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">False</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">9734</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+      <div class="quiz_comment empty">
+        <div class="answer_comment"></div>
+        <div class="answer_comment_html"></div>
+      </div>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_1766262"></a>
+  <div class="display_question question true_false_question  correct   " id="question_1766262">
+    
+<div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 10</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                1
+          <span class="points question_points"> / 1</span> pts
+        </div>
+    </span>
+    </div>
+      <div class="links" style="display: none;">
+        <a href="#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+          <a href="#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+      </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">true_false_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://dvc.instructure.com/courses/37582/quizzes/89444/questions/1766262" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">3742633</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">&lt;p&gt;Passing an array to a function is a kind of Pass-by-reference.&lt;/p&gt;</textarea>
+      </div>
+      <div id="question_1766262_question_text" class="question_text user_content enhanced">
+          <p>Passing an array to a function is a kind of Pass-by-reference.</p>
+      </div>
+      <div class="answers">
+                <div class="answers_wrapper">
+                  
+    <div class="answer answer_for_
+         
+         
+         
+         
+         selected_answer correct_answer" id="answer_926" style="" title="True. You selected this answer. This was the correct answer."><span class="answer_arrow correct" style="left: -128px; top: 5px;" id="answer_926_arrow">Correct!</span>
+
+
+      <span class="hidden id">926</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-926" name="question-1766262" type="radio" checked="checked" class="question_input" aria-disabled="true" disabled="disabled" aria-describedby="answer_926_arrow">&nbsp;
+      <label for="answer-926">
+        <div class="answer_text">True</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 38px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="True">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">True</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">926</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+      <div class="quiz_comment empty">
+        <div class="answer_comment"></div>
+        <div class="answer_comment_html"></div>
+      </div>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+    <div class="answer answer_for_
+         
+         
+         
+         
+          " id="answer_2386" style="" title="False.">
+
+
+      <span class="hidden id">2386</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-2386" name="question-1766262" type="radio" class="question_input" aria-disabled="true" disabled="disabled">&nbsp;
+      <label for="answer-2386">
+        <div class="answer_text">False</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 47.5px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="False">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">False</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">2386</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">0</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_1766263"></a>
+  <div class="display_question question true_false_question  correct" id="question_1766263">
+    
+<div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 11</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                1
+          <span class="points question_points"> / 1</span> pts
+        </div>
+    </span>
+    </div>
+      <div class="links" style="display: none;">
+        <a href="#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+          <a href="#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+      </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">true_false_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://dvc.instructure.com/courses/37582/quizzes/89444/questions/1766263" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">3742634</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">&lt;p&gt;The
+ two types of Pass-by-reference are: (1) &nbsp;Pass-by-reference using 
+reference, and (2) Pass-by-reference using value.&lt;/p&gt;</textarea>
+      </div>
+      <div id="question_1766263_question_text" class="question_text user_content enhanced">
+          <p>The two types of Pass-by-reference are: (1) &nbsp;Pass-by-reference using reference, and (2) Pass-by-reference using value.</p>
+      </div>
+      <div class="answers">
+                <div class="answers_wrapper">
+                  
+    <div class="answer answer_for_
+         
+         
+         
+         
+          " id="answer_1318" style="" title="True.">
+
+
+      <span class="hidden id">1318</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-1318" name="question-1766263" type="radio" class="question_input" aria-disabled="true" disabled="disabled">&nbsp;
+      <label for="answer-1318">
+        <div class="answer_text">True</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 38px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="True">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">True</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">1318</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">0</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+    <div class="answer answer_for_
+         
+         
+         
+         
+         selected_answer correct_answer" id="answer_7234" style="" title="False. You selected this answer. This was the correct answer."><span class="answer_arrow correct" style="left: -128px; top: 5px;" id="answer_7234_arrow">Correct!</span>
+
+
+      <span class="hidden id">7234</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-7234" name="question-1766263" type="radio" checked="checked" class="question_input" aria-disabled="true" disabled="disabled" aria-describedby="answer_7234_arrow">&nbsp;
+      <label for="answer-7234">
+        <div class="answer_text">False</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 47.5px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="False">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">False</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">7234</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+      <div class="quiz_comment empty">
+        <div class="answer_comment"></div>
+        <div class="answer_comment_html"></div>
+      </div>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+
+<div role="region" aria-label="Question" class="quiz_sortable question_holder " id="" style="" data-group-id="">
+  <div style="display: block; height: 1px; overflow: hidden;">&nbsp;</div>
+  <a name="question_1766264"></a>
+  <div class="display_question question true_false_question  correct" id="question_1766264">
+    
+<div class="move">
+  <a tabindex="0" class="draggable-handle" role="button">
+    <i class="icon-drag-handle">
+      <span class="screenreader-only">Move To...</span>
+      <span class="accessibility-warning screenreader-only">
+        This element is a more accessible alternative to drag &amp; drop reordering. Press Enter or Space to move this question.
+      </span>
+    </i>
+  </a>
+</div>
+
+
+    <div class="header">
+      <span class="name question_name" role="heading" aria-level="2">Question 12</span>
+      <span class="question_points_holder" style="">
+        <div class="user_points">
+                1
+          <span class="points question_points"> / 1</span> pts
+        </div>
+    </span>
+    </div>
+      <div class="links" style="display: none;">
+        <a href="#" class="edit_question_link no-hover" title="Edit this Question"><i class="icon-edit standalone-icon"><span class="screenreader-only">Edit this Question</span></i></a>
+          <a href="#" class="delete_question_link no-hover" title="Delete this Question"><i class="icon-end standalone-icon"><span class="screenreader-only">Delete this Question</span></i></a>
+      </div>
+    <div style="display: none;">
+      <span class="regrade_option"></span>
+      <span class="regrade_disabled">0</span>
+      <span class="question_type">true_false_question</span>
+      <span class="answer_selection_type"></span>
+        <a href="https://dvc.instructure.com/courses/37582/quizzes/89444/questions/1766264" class="update_question_url">&nbsp;</a>
+      <span class="assessment_question_id">3742635</span>
+    </div>
+    <div class="text">
+      <div class="original_question_text" style="display: none;">
+        <textarea style="display: none;" name="text_after_answers" class="textarea_text_after_answers"></textarea>
+        <textarea style="display: none;" name="question_text" class="textarea_question_text">&lt;p&gt;Among
+ Pass-by-value and two types of Pass-by-references, only 
+Pass-by-reference using reference does not allocate memory block for 
+mapping the caller’s arguments to callee’s parameters.That is, no data 
+is passed from caller function to the callee function. (If you know the 
+meaning of reference, you should be able to answer this 
+question.)&lt;/p&gt;</textarea>
+      </div>
+      <div id="question_1766264_question_text" class="question_text user_content enhanced">
+          <p>Among Pass-by-value and two types of Pass-by-references, 
+only Pass-by-reference using reference does not allocate memory block 
+for mapping the caller’s arguments to callee’s parameters.That is, no 
+data is passed from caller function to the callee function. (If you know
+ the meaning of reference, you should be able to answer this question.)</p>
+      </div>
+      <div class="answers">
+                <div class="answers_wrapper">
+                  
+    <div class="answer answer_for_
+         
+         
+         
+         
+         selected_answer correct_answer" id="answer_8800" style="" title="True. You selected this answer. This was the correct answer."><span class="answer_arrow correct" style="left: -128px; top: 5px;" id="answer_8800_arrow">Correct!</span>
+
+
+      <span class="hidden id">8800</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-8800" name="question-1766264" type="radio" checked="checked" class="question_input" aria-disabled="true" disabled="disabled" aria-describedby="answer_8800_arrow">&nbsp;
+      <label for="answer-8800">
+        <div class="answer_text">True</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 38px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="True">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">True</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">8800</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">100</span>
+      <div class="quiz_comment empty">
+        <div class="answer_comment"></div>
+        <div class="answer_comment_html"></div>
+      </div>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+    <div class="answer answer_for_
+         
+         
+         
+         
+          " id="answer_4811" style="" title="False.">
+
+
+      <span class="hidden id">4811</span>
+
+    <div class="select_answer answer_type">
+        <input id="answer-4811" name="question-1766264" type="radio" class="question_input" aria-disabled="true" disabled="disabled">&nbsp;
+      <label for="answer-4811">
+        <div class="answer_text">False</div>
+        <div class="answer_html"></div>
+      </label>
+    </div>
+    <div class="answer_type short_answer" style="display:none;">
+      <input name="answer_text" type="text" style="width: 47.5px; margin-bottom: 5px; color: rgb(0, 0, 0);" disabled="true" value="False">
+    </div>
+    <div class="answer_match matching_answer answer_type" style="display:none;">
+      <div class="answer_match_left">False</div>
+      <div class="answer_match_left_html" style="display:none;"></div>
+      <div class="answer_match_middle">&nbsp;</div>
+      <div class="answer_match_right">
+              
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div style="display: none;">
+      <span class="numerical_answer_type">exact_answer</span>
+      <span class="blank_id">none</span>
+      <span class="id">4811</span>
+      <span class="match_id"></span>
+    </div>
+      <div class="numerical_exact_answer answer_type" style="display:none;">
+        <span class="answer_exact">0</span> (with margin: <span class="answer_error_margin">0</span>)
+      </div>
+      <div class="numerical_precision_answer answer_type" style="display:none;">
+        <span class="answer_approximate">
+          0
+        </span> (with precision: <span class="answer_precision">0</span>)
+      </div>
+      <div class="numerical_range_answer answer_type" style="display:none;">
+        Between <span class="answer_range_start">0</span> and <span class="answer_range_end">0</span>
+      </div>
+    <div class="numerical_range_answer answer_type" style="display:none;">
+      <span class="answer_equation"></span>
+      <span class="margin" style="display: none;">
+        margin of error
+        <span style="font-size: 0.8em;">
+          +/-
+        </span>
+        <span class="answer_tolerance"></span>
+      </span>
+    </div>
+      <span class="answer_weight" style="display: none;">0</span>
+
+    <div class="clear"></div>
+  </div>
+
+    <div class="clear"></div>
+
+                </div>
+      </div>
+      <div class="after_answers">
+      </div>
+    </div>
+      
+    <div class="clear"></div>
+  </div>
+</div>
+
+</div>
+  <div id="update_scores">
+
+
+<div class="quiz_score" style="text-align: right; font-size: 1.2em; ">
+    Quiz Score:
+  <span class="score_value">10</span> out of 12
+</div>
+</div> <!-- #speed_update_scores || #update_scores -->
+</div>
+
+
+
+
+  <div id="assignment_external_tools"><div></div></div>
+
+  <div id="module_sequence_footer" style="display: none;"></div>
+
+</div>
+
+          </div>
+        </div>
+        <div id="right-side-wrapper" class="ic-app-main-content__secondary">
+          <aside id="right-side" role="complementary">
+                <div id="sidebar_content" class="rs-margin-bottom">
+      <ul class="page-action-list" style="display:none;">
+        <h2>Related Items</h2>
+
+
+      </ul>
+    </div>
+
+        
+  <div>
+    <div style="border-bottom: 1px solid #888; font-size: 1.1em; font-weight: bold;">
+        Submission Details:
+    </div>
+    <div>
+    <table class="summary" style="font-size: 1.1em;">
+      <tbody>
+        <tr>
+          <th>Time:</th>
+          <td>7 minutes</td>
+        </tr>
+        <tr style="">
+          <th>Current Score:</th>
+          <td>10 out of 12
+                  </td>
+        </tr>
+        <tr style="">
+          <th>Kept Score:</th>
+          <td>10 out of 12</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div style="display:none;"><!-- Everything inside of this should always stay hidden -->
+        <div id="page_view_id">32d0eedd-d06a-4400-ab4e-05562c7dcb47</div>
+    </div>
+  <div id="aria_alerts" class="hide-text affix" role="alert" aria-live="assertive"></div>
+  <div id="StudentTray__Container"></div>
+  
+
+<script>
+  INST = {"environment":"production","allowMediaComments":true,"kalturaSettings":{"domain":"nv.instructuremedia.com","resource_domain":"nv.instructuremedia.com","rtmp_domain":"iad.rtmp.instructuremedia.com","partner_id":"9","subpartner_id":"0","player_ui_conf":"0","kcw_ui_conf":"0","upload_ui_conf":"0","max_file_size_bytes":534773760,"do_analytics":false,"hide_rte_button":false,"js_uploader":true},"googleAnalyticsAccount":"UA-9138420-1","logPageViews":true,"maxVisibleEditorButtons":3,"editorButtons":[{"name":"YouTube","id":9,"url":"https://www.edu-apps.org/lti_public_resources/?tool_id=youtube","icon_url":"https://www.edu-apps.org/assets/lti_public_resources/youtube_icon.png","canvas_icon_class":null,"width":560,"height":600},{"name":"Films On Demand","id":335,"url":"https://lti.films.com/LtiSearch.aspx","icon_url":"http://fod.infobase.com/images/LTI_logo.png","canvas_icon_class":null,"width":920,"height":636},{"name":"Code Embed","id":391,"url":"https://code-embed-lti.herokuapp.com/lti_tool","icon_url":"https://code-embed-lti.herokuapp.com/images/icon.png","canvas_icon_class":null,"width":850,"height":650},{"name":"Dropbox","id":392,"url":"https://www.edu-apps.org/tool_redirect?id=dropbox","icon_url":"http://www.edu-apps.org/tools/dropbox/icon.png","canvas_icon_class":null,"width":400,"height":200},{"name":"Macmillan Higher Education Editor Button","id":508,"url":"https://lmslink.bfwpub.com/index.php?custom_action=toc","icon_url":"https://lmslink.bfwpub.com/images/icons/macmillan-logo-16px.png","canvas_icon_class":null,"width":1200,"height":650},{"name":"Insert Chemistry - WIRIS editor","id":611,"url":"https://www.wiris.net/instructure.com/canvas/editor-chemistry/dialog","icon_url":"https://www.wiris.net/instructure.com/canvas/editor-chemistry/icon.gif","canvas_icon_class":null,"width":570,"height":450},{"name":"Insert Chemistry - WIRIS editor","id":612,"url":"https://www.wiris.net/instructure.com/canvas/editor-chemistry/dialog","icon_url":"https://www.wiris.net/instructure.com/canvas/editor-chemistry/icon.gif","canvas_icon_class":null,"width":570,"height":450},{"name":"Insert Math Equation - WIRIS editor","id":613,"url":"https://www.wiris.net/instructure.com/canvas/editor/dialog","icon_url":"https://www.wiris.net/instructure.com/canvas/editor/icon.gif","canvas_icon_class":null,"width":570,"height":450},{"name":"Microsoft Office 365","id":3854,"url":"https://office365-iad-prod.instructure.com/lti/rce-content-item","icon_url":"https://office365-iad-prod.instructure.com/images/office365_icon.png","canvas_icon_class":null,"width":900,"height":600},{"name":"Google Apps","id":8069,"url":"https://google-drive-lti-iad-prod.instructure.com/lti/rce-content-selection","icon_url":"https://google-drive-lti-iad-prod.instructure.com/assets/google_drive_icon-ba12a17e3e3d7f70f910b17f1b4c0500ff0298ad087a93a6c133ca623c40f0f8.png","canvas_icon_class":null,"width":700,"height":600}]};
+  ENV = {"ASSET_HOST":"https://du11hjcvx0uqb.cloudfront.net","active_brand_config_json_url":"https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/5eb3cee8761aa18764368fc31a1d18a1/variables-750d72b9d3e5d522f965bf904110c132.json","url_to_what_gets_loaded_inside_the_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/5eb3cee8761aa18764368fc31a1d18a1/variables-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_normal_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-00732f6556.css"],"url_for_high_contrast_tinymce_editor_css":["https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/default/variables-high_contrast-750d72b9d3e5d522f965bf904110c132.css","https://du11hjcvx0uqb.cloudfront.net/dist/brandable_css/new_styles_high_contrast/bundles/what_gets_loaded_inside_the_tinymce_editor-077da306dd.css"],"current_user_id":"50319","current_user_roles":["user","student"],"current_user_disabled_inbox":false,"files_domain":"cluster55.canvas-user-content.com","DOMAIN_ROOT_ACCOUNT_ID":77740000000000001,"k12":false,"use_responsive_layout":false,"help_link_name":"Help","help_link_icon":"help","use_high_contrast":false,"LTI_LAUNCH_FRAME_ALLOWANCES":["geolocation","microphone","camera","midi","encrypted-media"],"DEEP_LINKING_POST_MESSAGE_ORIGIN":"https://dvc.instructure.com","DEEP_LINKING_LOGGING":null,"SETTINGS":{"open_registration":false,"eportfolios_enabled":true,"collapse_global_nav":false,"show_feedback_link":true,"enable_profiles":true},"ARC_RECORDING_FEATURE_ENABLED":true,"current_user":{"id":"50319","display_name":"Samin Amanat","avatar_image_url":"https://4cd.instructure.com/files/1879219/download?download_frd=1\u0026verifier=v1r575Fk7xZQKnRqxUhTPIbmiqei3AvM7SnFwG30","html_url":"https://dvc.instructure.com/about/50319","avatar_is_fallback":false},"page_view_update_url":"/page_views/32d0eedd-d06a-4400-ab4e-05562c7dcb47?page_view_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpIjoiMzJkMGVlZGQtZDA2YS00NDAwLWFiNGUtMDU1NjJjN2RjYjQ3IiwidSI6Nzc3NDAwMDAwMDAwNTAzMTksImMiOiIyMDE5LTAyLTA2VDA1OjI5OjI0LjQxWiJ9.j-m9SLIKAdWIhl4x_jGkMaldZSzQGZCbKemc3CyO4oU","context_asset_string":"course_37582","ping_url":"https://dvc.instructure.com/api/v1/courses/37582/ping","TIMEZONE":"America/Los_Angeles","CONTEXT_TIMEZONE":"America/Los_Angeles","LOCALE":"en","BIGEASY_LOCALE":"en_US","FULLCALENDAR_LOCALE":"en","MOMENT_LOCALE":"en","RICH_CONTENT_SERVICE_ENABLED":true,"RICH_CONTENT_APP_HOST":"rich-content-iad.inscloudgate.net","RICH_CONTENT_CDN_HOST":"dvgcns7dz7zc.cloudfront.net/rce_service/versions/","RICH_CONTENT_SKIP_SIDEBAR":null,"JWT":"ZXlKaGJHY2lPaUprYVhJaUxDSmxibU1pT2lKQk1qVTJSME5OSW4wLi44T1NhZG4xY3N4ZVhPREU1LmZWVGpmQTBzaGNSbjdLYVdZb1cteVlzMmhmazhHOVJuTWdfQ0k2Z0EzV0VlNG1CcVhoTTduUFZ2RWZxUEpaeEJyR2lQZXVZU0hTeUprUnVEcEpNU2Q1RlU0aUk5cFRiblpSa0g0OUlTdzI4a080dWZzUFItTzhHRHV2emw1X1g2M3g4c0NrME5jZ21mTVpfQ3dGdTRBbm1BanlVdktMaVcxTEJjcUZZLWlYclRpbjlxdURSX1picmpEa1o1RC1EWjVNSUJLRDN5S1M2Wmp3S2Z5MmtWX2VCMktoY19iME54NWFLcjFBNmV0RkthaWhCZFYtWGtfb0YyLWJvRmk3aUFvMG12ZGdjVnJmZklHRWxYMnhrT0NPcktxV0pPV2xjVUllZk40WU5pSXNMN2ppblBHWnREX2QxcDViaWY0azR4MV9lUFpmNGNSS3BHTGZNZ1dMU2xKT0FMTWgtNVgtQXZoWk9KSFRxZUVpc0ZkMS1QTVFaOXQ0bV9wVU15OGIxa3pTMHJSajBzUmV6cU9hYjM1ZUVuNGhfVzN6cnAtN3ZYYnRKRnpkbHFjLXVkek9XUm4tSXl1Q2lBWXEzQnQ5dTdTNWxwZEtXZmJZWW5Od2ktUmtoZHptdkw5T0tuWWloaDVjaGhjZ3d3T25fRFROSFFvQjRNZ2xrVFBWNm1uRktQVzFiNVVwN3hhRXRQaVYwcG03S2JKMV9kSVdVY1hHa2VQVTljRXhKNkVLeEdKX3hlNWkta3FtQXM4N3BINWJVT3dpbWNuMk9nZHU5MjNqdmVvLTFtaElVSnJJV01kd080bU84MW9tQmtoRDVPMmZfdGREdURnbzR2dWlpdXVjbFdZMzdRVHFzNWpRR0J0b2w1Y0ROend1OVQzdjRIUmE1SnlGZ3pWdWlBSk9CLXo3ZzlVSnpiWm43UW1aWjk1TUlab3ZyUXkwY0dPc1dFbF83SmVsM1FnWnltUlZSSTdyXzYzUC0xcDEtZXBITkU3X1ljaWduZDh2YXNGNTJrU0tyTVduSVMwLXdRdjNoLW9GMC1vU0ZnRlpNa09EcXcwSVFkeWxSSmRTWS5mdjJQejNCSWNXMmtZRjhLUFVmRTRn","RICH_CONTENT_CAN_UPLOAD_FILES":false,"RICH_CONTENT_FILES_TAB_DISABLED":false,"SUBMISSION_DOWNLOAD_DIALOG_TITLE":"Download All Quiz File Upload Submissions","UPLOAD_URL":"/api/v1/courses/37582/quizzes/89444/submissions/self/files","SUBMISSION_VERSIONS_URL":"https://dvc.instructure.com/courses/37582/quizzes/89444/submission_versions","QUIZ_SUBMISSION_EVENTS_URL":"https://dvc.instructure.com/api/v1/courses/37582/quizzes/89444/submissions/759727/events","ATTACHMENTS":{},"CONTEXT_ACTION_SOURCE":"quizzes","COURSE_ID":37582,"LOCKDOWN_BROWSER":false,"QUIZ":{"id":"89444","title":"Q2","html_url":"https://dvc.instructure.com/courses/37582/quizzes/89444","mobile_url":"https://dvc.instructure.com/courses/37582/quizzes/89444?force_user=1\u0026persist_headless=1","description":"","quiz_type":"assignment","time_limit":null,"shuffle_answers":false,"show_correct_answers":true,"scoring_policy":"keep_highest","allowed_attempts":1,"one_question_at_a_time":false,"question_count":12,"points_possible":12.0,"cant_go_back":false,"ip_filter":null,"due_at":"2019-02-07T07:59:00Z","lock_at":"2019-02-07T07:59:00Z","unlock_at":"2019-02-03T07:01:00Z","published":true,"locked_for_user":false,"hide_results":null,"show_correct_answers_at":null,"hide_correct_answers_at":null,"all_dates":[{"due_at":"2019-02-07T07:59:00Z","unlock_at":"2019-02-03T07:01:00Z","lock_at":"2019-02-07T07:59:00Z","base":true}],"can_update":false,"require_lockdown_browser":false,"require_lockdown_browser_for_results":false,"require_lockdown_browser_monitor":false,"lockdown_browser_monitor_data":null,"permissions":{"read_statistics":false,"manage":false,"read":true,"update":false,"create":false,"submit":true,"preview":false,"delete":false,"grade":false,"review_grades":false,"view_answer_audits":false},"quiz_reports_url":"https://dvc.instructure.com/api/v1/courses/37582/quizzes/89444/reports","quiz_statistics_url":"https://dvc.instructure.com/api/v1/courses/37582/quizzes/89444/statistics","quiz_submission_versions_html_url":"https://dvc.instructure.com/courses/37582/quizzes/89444/submission_versions","assignment_id":"463620","one_time_results":false,"assignment_group_id":"65949","show_correct_answers_last_attempt":false,"version_number":5,"has_access_code":false,"post_to_sis":false,"migration_id":null},"QUIZ_DETAILS_URL":"https://dvc.instructure.com/courses/37582/quizzes/89444/managed_quiz_data","QUIZZES_URL":"https://dvc.instructure.com/courses/37582/quizzes","MAX_GROUP_CONVERSATION_SIZE":100,"IS_SURVEY":false,"badge_counts":{"submissions":1},"notices":[]};
+</script>
+
+<script src="Quiz2_files/navigation_header.js" defer="defer"></script>
+<script src="Quiz2_files/evalkit.js" defer="defer"></script>
+
+</div> <!-- #application -->
+
+
+<div id="nav-tray-portal" style="position: relative; z-index: 99;"></div><div id="ek-overlay" style="display: none;"></div><div id="ek-modal" style="display: none;" role="dialog" tabindex="-1" aria-live="assertive" aria-labelledby="ek-modal-header"><div class="ek-modal-content"><h2 class="ek-modal-header" id="ek-modal-header"></h2><a id="ek-modal-close"></a><div class="ek-modal-body" id="ek-modal-body"></div><div class="ek-modal-footer"></div></div></div></body></html>

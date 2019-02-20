@@ -1,0 +1,141 @@
+/*
+
+Step 1:
+
+Compile and run. Answer the following questions.
+
+Question 1: Which parts of class Rectangle are data members? Are they public, private or protected?
+Question 2: Which functions(s) of class Rectangle is/are constructors, setters, getters or destructor?
+Question 3: Delete the constructors and modify the code in main() to make the program work. Can a class have no constructor?
+Question 3: Add the following two lines to a constructor which takes no parameter. Create 21 object without providing any width or height. Display the width and height of these objects to see they are.
+                width= 5.0;
+                height = 7.0;
+
+Step 2:
+
+Files in a project can be in many forms. Put all files in the main.cpp is a possibility.
+But when the project has more classes, this type of arrangement is the worst.
+Each class should be in a separated .h file or a pair of .h and .cpp files.
+
+Form 1 -- All code is in the main.cpp file.
+Form 2 -- Each class is in a separated .h file.
+Form 3 -- Each class is in a pair of separated .h and .cpp files.
+
+Now, move the Rectangle class to a separated .h file. Compile and run. The result
+should exactly the same with Form 1.
+
+Step 3:
+
+From 3 is the standard one in the industry. Use the following three files:
+
+     main.cpp
+     Rectangle.h
+     Rectangle.cpp
+
+for the project. Include all the three files in a project.
+
+*/
+
+////// Rectangle.h
+#include <iostream>
+#include <stdlib.h>
+#include <sstream>
+
+using namespace std;
+
+class Rectangle
+{
+private:
+    int serialNumber;
+    double width;
+    double height;
+
+public:
+    Rectangle(double, double);
+    ~Rectangle();
+    void setWidth(double);
+    void setHeight(double);
+    void setSerialNumber(int);
+    double getWidth() const;
+    double getHeight() const;
+    int getSerialNumber() const;
+};
+////// Rectangle.cpp
+//#include "Rectangle.h"
+
+
+    Rectangle::Rectangle(double w, double h)
+    {
+        width= w;
+        height = h;
+    }
+    Rectangle::~Rectangle()
+    {
+
+    }
+    void Rectangle::setWidth(double w)
+    {
+        width = w;
+    }
+
+    void Rectangle::setHeight(double h)
+    {
+        height = h;
+    }
+    double Rectangle::getWidth() const
+    {
+        return width;
+    }
+
+     double Rectangle::getHeight() const
+    {
+        return height;
+    }
+
+    void Rectangle::setSerialNumber(int s)
+    {
+        serialNumber = s;
+    }
+    int Rectangle::getSerialNumber() const
+    {
+        return serialNumber;
+    }
+
+
+
+////// main.cpp
+/*#include <iostream>
+#include <stdlib.h>
+#include <sstream>
+
+using namespace std;*/
+//#include "Rectangle.h"
+
+const int SIZE = 21;
+
+void display(Rectangle *[]);
+
+int main()
+{
+    Rectangle * arrRect[SIZE];
+
+    for (int i=0; i < SIZE; i++)
+    {
+         arrRect[i] = new Rectangle(2.0, 4.0);
+         arrRect[i]->setSerialNumber(1000 + i);
+    }
+    display(arrRect);
+
+}
+
+void display(Rectangle * arr[])
+{
+
+    for (int i=0; i < SIZE; i++)
+    {
+         cout <<  arr[i]->getSerialNumber() << endl;  /// Display the serial number of the Rectangle object
+    }
+
+}
+
+
