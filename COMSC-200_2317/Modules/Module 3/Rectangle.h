@@ -1,9 +1,23 @@
-////// Beginning of Rectangle.h
-#define RECTANGLE_H
+#include <iostream>
+#include <stdlib.h>
+#include <sstream>
+
+using namespace std;
+
 class Rectangle
 {
+private:
+    int serialNumber;
+    double width;
+    double height;
+
 public:
-  Rectangle();
-  void functionThatOutputsShit();
+    Rectangle(double, double);
+    ~Rectangle();
+    void setWidth(double);
+    void setHeight(double);
+    void setSerialNumber(int);
+    double getWidth() const;
+    double getHeight() const;
+    int getSerialNumber() const;
 };
-////// End of Rectangle.h

@@ -1,12 +1,34 @@
-////// Beginning of main.cpp
 #include <iostream>
+#include <stdlib.h>
+#include <sstream>
+
 using namespace std;
+
 #include "Rectangle.h"
+
+const int SIZE = 21;
+
+void display(Rectangle *[]);
 
 int main()
 {
-  Rectangle objectName;
-  objectName.functionThatOutputsShit();
-  return 0;
+    Rectangle * arrRect[SIZE];
+
+    for (int i=0; i < SIZE; i++)
+    {
+         arrRect[i] = new Rectangle(2.0, 4.0);
+         arrRect[i]->setSerialNumber(1000 + i);
+    }
+    display(arrRect);
+
 }
-////// End of main.cpp
+
+void display(Rectangle * arr[])
+{
+
+    for (int i=0; i < SIZE; i++)
+    {
+         cout <<  arr[i]->getSerialNumber() << endl;  /// Display the serial number of the Rectangle object
+    }
+
+}

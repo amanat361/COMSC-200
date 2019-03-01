@@ -1,15 +1,38 @@
-////// Beginning of Rectangle.cpp
-#include "Rectangle.h"
-#include <iostream>
-using namespace std;
+  #include "Rectangle.h"
 
-Rectangle::Rectangle()
-{
-    cout << "I figured it out" << endl;
-}
+    Rectangle::Rectangle(double w, double h)
+    {
+        width= w;
+        height = h;
+    }
+    Rectangle::~Rectangle()
+    {
 
-void Rectangle::functionThatOutputsShit()
-{
-  cout << "This is stuff being outputted" << endl;
-}
-////// End of Rectangle.cpp
+    }
+    void Rectangle::setWidth(double w)
+    {
+        width = w;
+    }
+
+    void Rectangle::setHeight(double h)
+    {
+        height = h;
+    }
+    double Rectangle::getWidth() const
+    {
+        return width;
+    }
+
+     double Rectangle::getHeight() const
+    {
+        return height;
+    }
+
+    void Rectangle::setSerialNumber(int s)
+    {
+        serialNumber = s;
+    }
+    int Rectangle::getSerialNumber() const
+    {
+        return serialNumber;
+    }
