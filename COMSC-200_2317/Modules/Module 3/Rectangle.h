@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <sstream>
+#include <string>
 
 using namespace std;
 
@@ -12,8 +13,10 @@ private:
     double height;
 
 public:
+    static int totalRectangles;
     Rectangle(double, double);
     ~Rectangle();
+    void printTotalRectangles();
     void setWidth(double);
     void setHeight(double);
     void setSerialNumber(int);

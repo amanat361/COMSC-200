@@ -1,14 +1,23 @@
   #include "Rectangle.h"
 
+    int Rectangle::totalRectangles = 0;
+
     Rectangle::Rectangle(double w, double h)
     {
         width= w;
         height = h;
+        serialNumber = totalRectangles;
     }
     Rectangle::~Rectangle()
     {
 
     }
+
+    void Rectangle::printTotalRectangles()
+    {
+        cout << endl << "Total Rectangles: " << totalRectangles << endl;
+    }
+
     void Rectangle::setWidth(double w)
     {
         width = w;
@@ -23,7 +32,7 @@
         return width;
     }
 
-     double Rectangle::getHeight() const
+    double Rectangle::getHeight() const
     {
         return height;
     }
