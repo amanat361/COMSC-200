@@ -1,21 +1,23 @@
-  #include "Rectangle.h"
+  #include "Rectangle.h" //link files
 
+    //Static integer values for counters of rectangles and rectangles of different types
     int Rectangle::totalRectangles = 0;
+    int Rectangle::totalSquares = 0;
+    int Rectangle::totalVerticals = 0;
+    int Rectangle::totalHorizontals = 0;
 
+    //Constructor
     Rectangle::Rectangle(double w, double h)
     {
         width= w;
         height = h;
         serialNumber = totalRectangles;
     }
+
+    //Deconstructor
     Rectangle::~Rectangle()
     {
 
-    }
-
-    void Rectangle::printTotalRectangles()
-    {
-        cout << endl << "Total Rectangles: " << totalRectangles << endl;
     }
 
     void Rectangle::setWidth(double w)
@@ -44,4 +46,13 @@
     int Rectangle::getSerialNumber() const
     {
         return serialNumber;
+    }
+
+    void Rectangle::setOutputLabel(string o)
+    {
+      outputLabel = o;
+    }
+    string Rectangle::getOutputLabel() const
+    {
+      return outputLabel;
     }
