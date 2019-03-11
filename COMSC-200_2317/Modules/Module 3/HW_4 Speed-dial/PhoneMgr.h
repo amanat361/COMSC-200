@@ -16,7 +16,7 @@ public:
     int getRecordCount() const;
     void Display();
     void Random();
-    void Dial();
+    void Dial(int);
 };
 
 #endif // PhoneMgr_H

@@ -14,24 +14,36 @@ int main()
 {
     string input;
     PhoneMgr pm;
-    int recordCount = 0;
+    int recordCount = pm.getRecordCount();
 
-    /// TO DO: Get the record count of the phone system
     do
     {
-        cout << "Enter D for listing, R for random choice, Q for quit, or an index number." << endl;
+        cout << "------======-MENU-======------" << endl;
+        cout << "Enter D to list all contacts." << endl;
+        cout << "Enter R for a random contact." << endl;
+        cout << "Enter Q to quit this program." << endl;
+        cout << "Or, enter a contact between 1 and " << recordCount << "." << endl << endl;
+        cout << "Input your choice: ";
         cin >> input;
+        cout << endl;
         if (input == "D" || input == "d")
-            pm.Display();
+          pm.Display();
         else if (input == "R" || input == "r")
-            pm.Random();
+          pm.Random();
         else if (input == "Q" || input == "q")
-        { }
+        {
+          return 0;
+        }
         else
         {
-            /// TO DO:  Convert the string to an int and check if is in the range.
-            /// If it is, call Dial() function of PhoneMgr class.
-            /// You may have to pass the converted int to the function.
+          if (stoi(input) > 0 && stoi(input) < recordCount)
+          {
+            pm.Dial(stoi(input));
+          }
+          else
+          {
+            cout << "The conact must be within the range of the list." << endl << endl;
+          }
         }
     }while(input != "Q" && input != "q");
 
