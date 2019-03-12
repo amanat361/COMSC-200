@@ -1,45 +1,47 @@
 /// How does the use of the Manager class avoid memory leak?
 /// Write your answer here.
 
-#include <iostream>
 #include "PhoneMgr.h"
-#include <stdlib.h>   /// For using atoi()
-#include <sstream>
-#include <cstdlib>
-#include <ctime>
 
 using namespace std;
 
 int main()
 {
+    //make phone manager pm
     string input;
     PhoneMgr pm;
     int recordCount = pm.getRecordCount();
 
     do
     {
-        cout << "------======-MENU-======------" << endl;
-        cout << "Enter D to list all contacts." << endl;
-        cout << "Enter R for a random contact." << endl;
-        cout << "Enter Q to quit this program." << endl;
-        cout << "Or, enter a contact between 1 and " << recordCount << "." << endl << endl;
-        cout << "Input your choice: ";
+        //output menu and prompt for choice
+        cout << "------======MENU======------" << endl;
+        cout << "Enter D to list all contacts" << endl;
+        cout << "Enter R for a random contact" << endl;
+        cout << "Enter Q to quit this program" << endl;
+        cout << "Enter # for contact (1 to " << recordCount << ")" << endl << endl;
+        cout << "Please input your choice: ";
         cin >> input;
         cout << endl;
-        if (input == "D" || input == "d")
-          pm.Display();
-        else if (input == "R" || input == "r")
-          pm.Random();
-        else if (input == "Q" || input == "q")
-        {
-          return 0;
-        }
+
+        //display contacts
+        if (input == "D" || input == "d") pm.Display();
+
+        //random contact
+        else if (input == "R" || input == "r") pm.Random();
+
+        //quit program
+        else if (input == "Q" || input == "q") return 0;
+
+        //dial contact
         else
         {
-          if (stoi(input) > 0 && stoi(input) < recordCount)
+          //convert input to integer and dial if within range
+          if (stoi(input) > 0 && stoi(input) <= recordCount)
           {
             pm.Dial(stoi(input));
           }
+          //prompt user that contact is out of range
           else
           {
             cout << "The conact must be within the range of the list." << endl << endl;
