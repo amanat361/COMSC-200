@@ -1,0 +1,63 @@
+Samin Amanat
+
+Questions:
+
+1.) Design and draw the class hierarchy of the Shape family.
+(If drawing of the class hierarchy will take too much time, English description os acceptable.)
+
+        / -----> Circle -----> Spray
+Shape <
+        \ -----> Rectangle -----> Square
+
+2.) Will public, protected, or private inheritance be used in the system? Why?
+
+Most likely in this program we will be using protected inheritance.
+This is because there is a default shape, and then another shape that overrides functions from it.
+For example, a spray is just a circle with a different density.
+Also, a square is a type of rectangle but has different parameters.
+
+3.) What data members are needed for each one of these classes? Why?
+
+We need data members like radius, width, height, and density because these are the data members
+that we can use to make up the shape.
+
+4.) What Constructor functions are needed for each one of these classes? Why?
+
+Each shape would need a constructor depending on what it is. For example,
+circle would need a function that takes the radius, and shapes like spray
+care about that, and also the density.
+
+5.) What functions should be provided? Which function is Virtual?
+Should the function be Virtual function or Pure Virtual function?
+
+We would need a combination of getter and setter functions.
+For example, a public getRadius function could get the radius to feed the private
+variable radius for both the circle and spray shapes.
+
+6.) How can Rectangle, Square, Circle and Spray be drawn?
+
+We can use loops that access data from the class and output the shape based on the
+object parameters. For example, if the square length is 5, then the width must be 5,
+and then you can draw a square with an area of 25 by printing 5 times, and then a new line,
+and then do that a total of 5 times.
+
+Quick example
+
+for (int i = 0; i < 5; i++)
+{
+  for (int j = 0; j < 5; j++)
+  {
+    cout << "*";
+  }
+  cout << endl;
+}
+
+This will print:
+
+*****
+*****
+*****
+*****
+
+In our program, we will replace "5" with whatever the length is. This basic idea
+can be applied to all of the other shapes as well.
