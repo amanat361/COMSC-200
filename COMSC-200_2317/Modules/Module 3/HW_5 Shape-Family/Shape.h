@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <string>
 #include "stdlib.h"
 
 using namespace std;
@@ -10,6 +11,8 @@ using namespace std;
 class Shape
 {
 private:
+  char shapeType;
+  int serialNumber;
   double radius;
   double width;
   double side;
