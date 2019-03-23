@@ -3,22 +3,23 @@
 
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <string>
-#include "stdlib.h"
 
 using namespace std;
 
 class Shape
 {
-private:
-  char shapeType;
-  int serialNumber;
-  double radius;
-  double width;
-  double side;
+  protected:
+    int serialNumber = 0;
+  public:
+    void setSerialNumber(int);
+    int getSerialNumber() const;
 
-public:
-
-}
+    virtual void setDataOne(int) = 0;
+    virtual int getDataOne() = 0;
+    virtual void setDataTwo(int) = 0;
+    virtual int getDataTwo() = 0;
+};
 
 #endif // Shape_H

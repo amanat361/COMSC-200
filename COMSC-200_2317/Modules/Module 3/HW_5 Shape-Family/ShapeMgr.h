@@ -2,21 +2,22 @@
 #define SHAPEMGR_H
 
 #include "Shape.h"
+#include "Rectangle.h"
+#include "Square.h"
 
 const int SIZE = 99;
 
-using namespace std;
-
 class ShapeMgr
 {
-private:
-  Shape * arrShapes[SIZE] = {nullptr};
-  int recordCount = 0;
-public:
-  ShapeMgr();
-  ~ShapeMgr();
-  int getRecordCount() const;
-  void displayAll();
-}
+  private:
+    char shapeType;
+  protected:
+    Shape * arrShapes[SIZE] = {nullptr};
+    int recordCount = 0;
+  public:
+    ShapeMgr();
+    ~ShapeMgr();
+    void displayAll();
+};
 
 #endif // ShapeMgr_H

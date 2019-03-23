@@ -4,33 +4,50 @@ using namespace std;
 
 ShapeMgr::ShapeMgr()
 {
-  string line;
-  int pos, pos2;
-
-  char shapeTypeX;
-  int serialNumberX;
-  double radiusX;
-  double widthX;
-  double sideX;
-
   fstream inputFile;
   string fileName = "shaperecords.txt";
+  string line, temp;
   inputFile.open(fileName);
 
   while (getline(inputFile, line))
   {
-    arrShapes[recordCount] = new Shape;
+    stringstream stream(line);
+    stream >> temp;
+
+    if (temp[0] == 'R') arrShapes[recordCount] = new Rectangle;
+    else if (temp[0] == 'Q') arrShapes[recordCount] = new Square;
+
+    if (temp[0] == 'R' || temp[0] == 'Q')
+    {
+      stream >> temp;
+      arrShapes[recordCount]->setSerialNumber(stoi(temp));
+      cout << arrShapes[recordCount]->getSerialNumber() << ", ";
+
+      stream >> temp;
+      arrShapes[recordCount]->setDataOne(stoi(temp));
+      cout << arrShapes[recordCount]->getDataOne() << ", ";
+
+      stream >> temp;
+      arrShapes[recordCount]->setDataTwo(stoi(temp));
+      cout << arrShapes[recordCount]->getDataTwo() << endl;
+    }
+
     recordCount++;
-
-    shapeTypeX = line.substr(0, 1);
-    pos = line.find(' ');
-    pos2 = line.find(pos, ' ');
-    serialNumberX = line.substr(pos, pos2)
-    pos = pos2;
-    pos2 = line.find(pos, ' ');
-
-    
   }
 
   inputFile.close();
 }
+
+ShapeMgr::~ShapeMgr()
+{
+  for (int i = 0; i < SIZE; i++)
+  {
+    if (arrShapes[i] != nullptr)
+    {
+      delete[] arrShapes[i];
+    }
+  }
+}
+
+void displayAll()
+{}

@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-  mgrShape ms;
-  ms.displayAll();
+  ShapeMgr ms;
+  //ms.displayAll();
   return 0;
 }

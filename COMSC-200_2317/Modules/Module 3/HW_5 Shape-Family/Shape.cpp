@@ -1,3 +1,11 @@
 #include "Shape.h"
 
-using namespace std;
+void Shape::setSerialNumber(int x)
+{
+  serialNumber = x;
+}
+
+int Shape::getSerialNumber() const
+{
+  return serialNumber;
+}
