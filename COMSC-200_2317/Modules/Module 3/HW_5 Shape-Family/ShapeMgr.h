@@ -11,14 +11,13 @@ const int SIZE = 99;
 
 class ShapeMgr
 {
-  private:
-    char shapeType;
   protected:
     Shape * arrShapes[SIZE] = {nullptr};
     int recordCount = 0;
   public:
     ShapeMgr();
     ~ShapeMgr();
+    void populateShapeData();
     void displayAll();
 };
 
