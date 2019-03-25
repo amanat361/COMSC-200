@@ -4,6 +4,7 @@
 #include "Shape.h"
 #include "Rectangle.h"
 #include "Square.h"
+#include "Circle.h"
 
 const int SIZE = 99;
 

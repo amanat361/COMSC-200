@@ -16,8 +16,9 @@ ShapeMgr::ShapeMgr()
 
     if (temp[0] == 'R') arrShapes[recordCount] = new Rectangle;
     else if (temp[0] == 'Q') arrShapes[recordCount] = new Square;
+    else if (temp[0] == 'C') arrShapes[recordCount] = new Circle;
 
-    if (temp[0] == 'R' || temp[0] == 'Q')
+    if (temp[0] == 'R' || temp[0] == 'Q' || temp[0] == 'C')
     {
       stream >> temp;
       arrShapes[recordCount]->setSerialNumber(stoi(temp));
