@@ -15,6 +15,7 @@ class Circle: public Shape
     virtual int getDataOne();
     virtual void setDataTwo(int);
     virtual int getDataTwo();
+    virtual void draw();
 };
 
 #endif // Circle_H

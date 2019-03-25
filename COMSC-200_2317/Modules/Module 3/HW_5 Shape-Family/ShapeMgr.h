@@ -5,6 +5,7 @@
 #include "Rectangle.h"
 #include "Square.h"
 #include "Circle.h"
+#include "Spray.h"
 
 const int SIZE = 99;
 

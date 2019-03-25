@@ -15,6 +15,7 @@ class Square: public Rectangle
     int getDataOne();
     void setDataTwo(int);
     int getDataTwo();
+    void draw();
 };
 
 #endif // Square_H

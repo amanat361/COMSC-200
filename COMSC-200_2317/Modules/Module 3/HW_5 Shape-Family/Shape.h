@@ -20,6 +20,7 @@ class Shape
     virtual int getDataOne() = 0;
     virtual void setDataTwo(int) = 0;
     virtual int getDataTwo() = 0;
+    virtual void draw() = 0;
 };
 
 #endif // Shape_H

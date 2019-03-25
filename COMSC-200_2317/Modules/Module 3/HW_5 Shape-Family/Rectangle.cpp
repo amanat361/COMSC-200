@@ -19,3 +19,11 @@ int Rectangle::getDataTwo()
 {
   return height;
 }
+
+void Rectangle::draw()
+{
+  cout << "-----Rectangle object-----" << endl << endl;
+  cout << " Serial number: " << serialNumber << endl;
+  cout << " Width: " << width << endl;
+  cout << " Height: " << height << endl << endl;
+}

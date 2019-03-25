@@ -5,6 +5,6 @@ using namespace std;
 int main()
 {
   ShapeMgr ms;
-  //ms.displayAll();
+  ms.displayAll();
   return 0;
 }
