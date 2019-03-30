@@ -2,6 +2,9 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <cstdlib>
+#include <time.h>
+#include <math.h>
 
 using namespace std;
 
@@ -38,10 +41,17 @@ class Rectangle: public Shape
     }
     virtual void draw()
     {
-      cout << "-----Rectangle object-----" << endl << endl;
-      cout << " Serial number: " << serialNumber << endl;
-      cout << " Width: " << width << endl;
-      cout << " Height: " << height << endl << endl;
+      cout << "Rectangle #" << serialNumber << endl;
+      cout << "Width: " << width << " / Height: " << height << endl << endl;
+      for (int i = 0; i < height; i++)
+      {
+        for (int j = 0; j < width; j++)
+        {
+          cout << "* ";
+        }
+        cout << endl;
+      }
+      cout << endl;
     }
 };
 
@@ -61,9 +71,17 @@ class Square: public Rectangle
     }
     void draw()
     {
-      cout << "-----Square object-----" << endl << endl;
-      cout << " Serial number: " << serialNumber << endl;
-      cout << " Side: " << side << endl << endl;
+      cout << "Square #" << serialNumber << endl;
+      cout << "Side: " << side << endl << endl;
+      for (int i = 0; i < side; i++)
+      {
+        for (int j = 0; j < side; j++)
+        {
+          cout << "* ";
+        }
+        cout << endl;
+      }
+      cout << endl;
     }
 };
 
@@ -72,6 +90,7 @@ class Circle: public Shape
   protected:
     int radius;
     int dummy;
+    double z;
   public:
     virtual void setDataOne(int x)
     {
@@ -83,9 +102,19 @@ class Circle: public Shape
     }
     virtual void draw()
     {
-      cout << "-----Circle object-----" << endl << endl;
-      cout << " Serial number: " << serialNumber << endl;
-      cout << " Radius: " << radius << endl << endl;
+      cout << "Circle #" << serialNumber << endl;
+      cout << "Radius: " << radius << endl << endl;
+      for (int y = -radius; y < radius + 1; y++)
+      {
+        for (int x = -radius; x < radius + 1; x++)
+        {
+          z = sqrt((x*x) + (y*y));
+          if (-0.6 <= (radius - z) && (radius - z) <= 0.6) cout << "*";
+          else cout << " ";
+        }
+        cout << endl;
+      }
+      cout << endl;
     }
 };
 
@@ -93,17 +122,42 @@ class Spray: public Circle
 {
   private:
     int density;
+    int randomValue;
   public:
     void setDataTwo(int x)
     {
       density = x;
     }
+
     void draw()
     {
-      cout << "-----Spray object-----" << endl << endl;
-      cout << " Serial number: " << serialNumber << endl;
-      cout << " Radius: " << radius << endl;
-      cout << " Density: " << density << endl << endl;
+      cout << "Spray #" << serialNumber << endl;
+      cout << "Radius: " << radius << " / Density: " << density << endl << endl;
+
+      srand(time(NULL));
+
+      for (int y = -radius; y < radius + 1; y++)
+      {
+        for (int x = -radius; x < radius + 1; x++)
+        {
+          z = sqrt((x*x) + (y*y));
+
+          if (-0.6 <= (radius - z) && (radius - z) <= 0.6)
+          {
+            cout << "*";
+          }
+
+          else if (z < radius)
+          {
+            randomValue = (rand() % 100); //range is 0 - 99
+            if (randomValue < density) cout << "*";
+            else cout << " ";
+          }
+          else cout << " ";
+        }
+        cout << endl;
+      }
+      cout << endl;
     }
 };
 
