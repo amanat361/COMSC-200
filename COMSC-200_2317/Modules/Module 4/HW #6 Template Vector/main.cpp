@@ -22,10 +22,10 @@ template <typename randomType>
 randomType randomPick(randomType x, randomType y, randomType z)
 {
   srand(time(0));
-  int randomNumber = rand()%3;
+  int randNum = rand()%3;
 
-  if (randomNumber == 0) return x;
-  else if (randomNumber == 1) return y;
+  if (randNum == 0) return x;
+  else if (randNum == 1) return y;
   else return z;
 }
 
@@ -56,12 +56,13 @@ private:
 public:
   void insert(T x)
   {
-    if (vec.size() > 0)
+    isValid = true;
+    for (int i = 0; i < vec.size(); i++)
     {
-      for (int i = 0; i < vec.size(); i++)
+      if (x == vec.at(i))
       {
-        if (x == vec.at(i)) isValid = false;
-        else isValid = true;
+        cout << "Repeated value discovered: " << x << " (already at index " << i << ")" << endl;
+        isValid = false;
       }
     }
     if (isValid) vec.push_back(x);
@@ -69,9 +70,17 @@ public:
 
   void display()
   {
-    for (int i = 0; i < vec.size(); i++)
+    cout << endl;
+    if (vec.size() == 0)
     {
-      cout << vec.at(i) << endl;
+      cout << "The vector is empty." << endl;
+    }
+    else
+    {
+      for (int i = 0; i < vec.size(); i++)
+      {
+        cout << vec.at(i) << endl;
+      }
     }
   };
 
@@ -90,12 +99,22 @@ public:
     return vec.at(vec.size() - 1);
   };
 
+  T getMax()
+  {
+    T max = vec.at(0);
+    for (int i = 0; i < vec.size(); i++)
+    {
+      if ((vec.at(i)) > max) max = vec.at(i);
+    }
+    return max;
+  };
+
   T getMin()
   {
     T min = vec.at(0);
-    for (int i = 1; i < vec.size(); i++)
+    for (int i = 0; i < vec.size(); i++)
     {
-      if (vec.at(i) < min) min = vec.at(i);
+      if ((vec.at(i)) < min) min = vec.at(i);
     }
     return min;
   };
@@ -112,32 +131,21 @@ int main()
   cout << getChoice("x", "y", 1, 2) << endl << endl;
 
   cout << "Part 3" << endl;
-  /*
   UniqueList <string> u;
   u.insert("11");
   u.insert("12");
+  u.insert("12");
+  u.insert("19");
   u.insert("23");
   u.insert("40");
   u.insert("9");
   u.insert("12");
   u.display();
-  */
-
-  UniqueList <int> u;
-  u.insert(5);
-  u.insert(10);
-  u.insert(10);
-  u.insert(20);
-  u.insert(3);
-  u.insert(3);
-  u.insert(23);
-  u.insert(5);
-  u.insert(27);
-  u.display();
 
   cout << "The size of UniqueList is " << u.Size() << endl;
   cout << "The first element of UniqueList is " << u.getFirst() << endl;
   cout << "The last element of UniqueList is " << u.getLast() << endl;
+  cout << "The max element of UniqueList is " << u.getMax() << endl;
   cout << "The min element of UniqueList is " << u.getMin() << endl << endl;
 
   return 0;
