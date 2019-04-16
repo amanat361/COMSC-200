@@ -47,10 +47,9 @@ workaround to this would be template type specifiers which I believe we will lea
 using namespace std;
 
 //Random pick function that takes three values of any (same) type, and chooses one to return
-template <typename randomType>
-randomType randomPick(randomType x, randomType y, randomType z)
+template <typename R>
+R randomPick(R x, R y, R z)
 {
-  srand(time(0)); //seed random number code
   int randNum = rand()%3; //generate number
 
   if (randNum == 0) return x;
@@ -59,8 +58,8 @@ randomType randomPick(randomType x, randomType y, randomType z)
 }
 
 //Corresponding function that prompts two strings and outputs one of the (any type but same type) variables
-template <typename correspondingType>
-correspondingType getChoice(string s1, string s2, correspondingType a, correspondingType b)
+template <typename C>
+C getChoice(string s1, string s2, C a, C b)
 {
   bool invalid = true;
   string userInput;
@@ -68,11 +67,12 @@ correspondingType getChoice(string s1, string s2, correspondingType a, correspon
   while (invalid) //loop until user inputs either s1 or s2
   {
     cout << "Please pick " << s1 << " or " << s2 << ": ";
-    cin >> userInput;
+    getline (cin, userInput);
     if (userInput != s1 && userInput != s2) cout << "Invalid input..." << endl;
     else invalid = false;
   }
 
+  cout << "Your corresponding value is: ";
   if (userInput == s1) return a;
   else return b;
 }
@@ -127,30 +127,54 @@ public:
 
 int main()
 {
+  //TIME SEED
+  srand(time(NULL));
+
   //PART ONE RANDOM PICK
-  cout << "Part 1" << endl;
+  cout << "Part 1 - Random Pick" << endl << endl;
   cout << randomPick('1', '2', '3') << endl;
   cout << randomPick(11, 22, 33) << endl;
+  cout << randomPick(123.321, 321.123, 500.005) << endl;
   cout << randomPick("Mac", "PC", "Others") << endl << endl;
 
   //PART TWO CORRESPONDING PICK
-  cout << "Part 2" << endl;
-  cout << getChoice("x", "y", 1, 2) << endl << endl;
+  cout << "Part 2 - Corresponder" << endl << endl;
+  cout << getChoice("x", "y", 1, 2) << endl;
+  cout << getChoice("a", "b", 'a', 'b') << endl;
+  cout << getChoice("1", "2", "One", "Two") << endl;
+  cout << getChoice("option 1", "option 2", 7873.89, 1300.14) << endl << endl;
 
   //PART THREE UNIQUE LIST
-  cout << "Part 3" << endl;
+  cout << "Part 3 - Unique List" << endl << endl;
+  cout << "List \"Fruits\":" << endl << endl;
   UniqueList <string> u; //create the list
-  u.insert("11"); //insert value into list
-  u.insert("12"); //insert value into list
-  u.insert("19"); //insert value into list
-  u.insert("23"); //insert value into list
-  u.insert("40"); //insert value into list
-  u.insert("9");  //insert value into list
-  u.insert("12"); //insert value into list
+  u.insert("Banana"); //insert value into list
+  u.insert("Apple"); //insert value into list
+  u.insert("Guava"); //insert value into list
+  u.insert("Guava"); //insert value into list
+  u.insert("Strawberry"); //insert value into list
+  u.insert("Orange");  //insert value into list
+  u.insert("Pear"); //insert value into list
   u.display();   //display the unique list
-  cout << "The size of UniqueList is "          << u.Size()     << endl;
-  cout << "The first element of UniqueList is " << u.getFirst() << endl;
-  cout << "The last element of UniqueList is "  << u.getLast()  << endl;
-  cout << "The max element of UniqueList is "   << u.getMax()   << endl;
-  cout << "The min element of UniqueList is "   << u.getMin()   << endl;
+  cout << "The list size is "     << u.Size()     << endl;
+  cout << "The first element is " << u.getFirst() << endl;
+  cout << "The last element is "  << u.getLast()  << endl;
+  cout << "The max element is "   << u.getMax()   << endl;
+  cout << "The min element is "   << u.getMin()   << endl << endl;
+
+  cout << "List \"Integers\":" << endl << endl;
+  UniqueList <int> t; //create the list
+  t.insert(500); //insert value into list
+  t.insert(600); //insert value into list
+  t.insert(700); //insert value into list
+  t.insert(100); //insert value into list
+  t.insert(100); //insert value into list
+  t.insert(150);  //insert value into list
+  t.insert(450); //insert value into list
+  t.display();   //display the unique list
+  cout << "The list size is "     << t.Size()     << endl;
+  cout << "The first element is " << t.getFirst() << endl;
+  cout << "The last element is "  << t.getLast()  << endl;
+  cout << "The max element is "   << t.getMax()   << endl;
+  cout << "The min element is "   << t.getMin()   << endl << endl;
 }
