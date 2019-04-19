@@ -183,6 +183,61 @@ class ShapeMgr
         }
       }
     }
+
+    void populateShapeData()
+    {
+      bool continueThing = true;
+      int userChoice = 0;
+      int temp;
+      while (continueThing)
+      {
+        cout << "---Shape Menu---" << endl << endl;
+        cout << "1. Done making shapes." << endl;
+        cout << "2. Make Rectangle." << endl;
+        cout << "3. Make Square." << endl;
+        cout << "4. Make Circle." << endl;
+        cout << "5. Make Spray." << endl << endl;
+        cout << "Insert choice: ";
+        cin >> userChoice;
+
+        if (userChoice == 1) continueThing = false;
+        if (continueThing)
+        {
+        if (userChoice == 2)
+        {
+          arrShapes[recordCount] = new Rectangle;
+        }
+        else if (userChoice == 3)
+        {
+          arrShapes[recordCount] = new Square;
+        }
+        else if (userChoice == 4)
+        {
+          arrShapes[recordCount] = new Circle;
+        }
+        else if (userChoice == 5)
+        {
+          arrShapes[recordCount] = new Spray;
+        }
+
+        cout << "Insert Serial Number: ";
+        cin >> temp;
+        arrShapes[recordCount]->setSerialNumber(temp);
+
+        cout << "Insert Data One: ";
+        cin >> temp;
+        arrShapes[recordCount]->setDataOne(temp);
+
+        cout << "Insert Data Two: ";
+        cin >> temp;
+        arrShapes[recordCount]->setDataTwo(temp);
+
+        recordCount++;
+        }
+      }
+    }
+
+    /*
     //create shapes
     void populateShapeData()
     {
@@ -228,6 +283,8 @@ class ShapeMgr
       //close file
       inputFile.close();
     }
+    */
+
     //display shapes
     void displayAll()
     {
