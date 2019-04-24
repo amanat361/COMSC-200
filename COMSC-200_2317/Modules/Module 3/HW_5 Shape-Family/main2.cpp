@@ -100,6 +100,33 @@ class Circle: public Shape
     {
       dummy = x;
     }
+
+    virtual void draw()
+    {
+      float console_ratio = 4.0/3.0;
+      float circle_radius = radius;
+      float a = console_ratio*circle_radius;
+      float b = circle_radius;
+
+      for (int y = -circle_radius; y <= circle_radius; y++)
+      {
+          for (int x = -console_ratio*circle_radius; x <= console_ratio*circle_radius; x++)
+          {
+              float d = (x/a)*(x/a) + (y/b)*(y/b);
+              if (d > 0.90 && d < 1.1)
+              {
+                  cout << "loading ";
+              }
+              else
+              {
+                   cout << " ";
+              }
+          }
+          cout << endl;
+      }
+    }
+
+    /*
     virtual void draw()
     {
       cout << "Circle #" << serialNumber << endl;
@@ -116,6 +143,7 @@ class Circle: public Shape
       }
       cout << endl;
     }
+    */
 };
 
 class Spray: public Circle
@@ -144,13 +172,13 @@ class Spray: public Circle
 
           if (-0.6 <= (radius - z) && (radius - z) <= 0.6)
           {
-            cout << "*";
+            cout << "loading ";
           }
 
           else if (z < radius)
           {
             randomValue = (rand() % 100); //range is 0 - 99
-            if (randomValue < density) cout << "*";
+            if (randomValue < density) cout << "loading ";
             else cout << " ";
           }
           else cout << " ";
