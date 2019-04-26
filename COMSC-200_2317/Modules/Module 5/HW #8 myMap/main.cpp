@@ -36,7 +36,8 @@ public:
 
   int * find(char c)
   {
-    // TO DO: Add code here
+    int * p;
+    return p; //template for using pointers in future
   };
 
   /*
@@ -47,7 +48,8 @@ public:
 
   int * begin()
   {
-    // TO DO: Add code here
+    int * p;
+    return p; //template for using pointers in future
   };
 
   /*
@@ -61,12 +63,13 @@ public:
 
   void display()
   {
-
+    //we will use pointer instead of iterator here
   };
 };
 
 int main()
 {
+  /*
   myMap <char,int> mp1;
 
   mp1.insert(pair<char,int>('z',900));
@@ -80,4 +83,5 @@ int main()
 
   mp1.find('c');
   mp1.find('x');
+  */
 }
