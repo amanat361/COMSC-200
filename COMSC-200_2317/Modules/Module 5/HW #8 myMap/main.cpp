@@ -5,31 +5,63 @@ using namespace std;
 template <typename T1, typename T2>
 class myMap
 {
+private:
+  struct List
+  {
+    pair<T1,T2> pa;
+    List* next;
+  };
 public:
   myMap *next;
+
+  /*
+  Similar to the isnert() function of map in STL.
+  The only difference is that it returns T or F
+  to indicate if the new element is inserted.
+  */
+
   bool insert(pair<T1,T2> pa)
   {
     bool b = false;
-    // TO DO: Add code here
+
+    return b;
   };
+
+  /*
+  Similar to the find() function of the map in STL.
+  The only difference is that the returned value is a
+  pointer which points to the element if the key is found.
+  If the key is not found, the returned value is nullptr.
+  */
+
   int * find(char c)
   {
     // TO DO: Add code here
   };
+
+  /*
+  If the map is not empty, then it returns the pointer
+  which points to the first element of the map. Otherwise,
+  it return nullptr.
+  */
+
   int * begin()
   {
     // TO DO: Add code here
   };
+
+  /*
+  It returns nullptr.
+  */
+
   int * end()
   {
     return nullptr;
   };
+
   void display()
   {
-    for(auto it = myMap.begin(); it != myMap.end(); ++it)
-    {
-      cout << it->first << " -> " << it->second << endl;
-    }
+
   };
 };
 
