@@ -1,0 +1,22 @@
+I         123456789   "John  J. Johnson"    F
+
+I          512434990   " Mary   Jackson"     F
+
+I          342432444   "Peter Von Young"      M
+
+I         470068625  "Jim         Lee"             M
+
+I         234324324  "Tammy  Gaddis"       F
+
+I         121219000   "Ester     Schwab "     F
+
+U       123456789   "John     Johnson"    M
+
+D       121219ooo   " Ester     Schwab"       F
+D       121219000   " Ester     Schwab"      F
+
+D       121219000   "Ester     Schwab"      F
+
+I         123456789   "John     Johnson"    F
+
+U       999999999   "John     Trumpt "   M
