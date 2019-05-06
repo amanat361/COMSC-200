@@ -29,13 +29,13 @@ void cleanText(vector <string> &vec, string line)
     }
   }
 
-  stringstream stream(line);
+  //stringstream stream(line);
 
   for (int i = 0; i < len; i++)
   {
-    stream >> temp;
-    vec.push_back(temp);
-    len = len - temp.length();
+    //stream >> temp;
+    vec.push_back(line);
+    len = len - line.length();
   }
 }
 
@@ -77,7 +77,7 @@ void displayMap(map<string, int> &map)
   int display;
   for(auto it = map.begin(); it != map.end(); ++it)
   {
-    display = 10 - it->first.length();
+    display = 50 - it->first.length();
     cout << "Word: " << it->first;
     for (int i = 0; i < display; i++)
     {
