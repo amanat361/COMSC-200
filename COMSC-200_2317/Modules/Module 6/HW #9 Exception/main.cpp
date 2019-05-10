@@ -5,7 +5,8 @@
 #include <fstream>
 using namespace std;
 
-struct Student{
+struct Student
+{
   int ssn;
   string name;
   char gender;
@@ -13,10 +14,13 @@ struct Student{
 
 class StudentMgr
 {
-  //hfdgkjdhgjerkgh
   private:
     vector<Student> sList;
     vector<int> temp;
+
+    string getSSN(string);
+    string getName(string);
+    string getGender(string);
 
     void insertStudent(int, string, char);
     void updateStudent(int, string, char);
@@ -55,12 +59,9 @@ StudentMgr::StudentMgr()
       }
     }
 
-    Student temp;
-    temp.ssn = 123;
-    temp.name = line;
-    temp.gender = 'F';
-
-    sList.push_back(temp);
+    if (tolower(line[0]) == 'i') insertStudent(ssn, name, gender);
+    else if (tolower(line[0]) == 'u') updateStudent(ssn, name, gender);
+    else if (tolower(line[0]) == 'd') deleteStudent(ssn);
   }
   inputFile.close();
 
@@ -69,7 +70,7 @@ StudentMgr::StudentMgr()
 
   /// TO DO: Add your code here
   ///
-  /// In each iteration of awhileloopdo the following:/
+  /// In each iteration of a while loop do the following:/
   //       1. Use getline() to read one line of data in students.txt
   ///      2. Use the code in parseString() to decompose the data tokens.
   ///         And save the data tokens in alocal vector.(This is the vector sList.)
@@ -85,6 +86,11 @@ StudentMgr::StudentMgr()
 StudentMgr::~StudentMgr()
 {
 
+}
+
+string StudentMgr::getSSN (string line)
+{
+  s
 }
 
 void StudentMgr::insertStudent (int ssn, string ame, char gender)
@@ -159,7 +165,7 @@ int main()
     {
       case 'a':
         sm.displayAll();
-        sm.sortBySSN();
+        //sm.sortBySSN();
         cout << endl << endl << "sorted" << endl << endl;
         sm.displayAll();
         break;

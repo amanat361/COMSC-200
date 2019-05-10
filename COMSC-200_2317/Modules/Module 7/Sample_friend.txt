@@ -1,0 +1,66 @@
+/*
+
+Step 1
+Explain what doubleIt() is for? What will happen if we remove the "&"?
+
+Step 2
+Comment out the following line in class Rectangle
+               friend Rectangle doubleIt(Rectangle&);
+     What will happen? What error message will we get?
+
+Step 3
+If we do not want to use friend function, what is the other technical approach to conduct the task?
+Complete the work and compare the pros and cons of these two approaches.
+
+Step 4
+Uncomment these two lines:
+  // Rectangle foo = bar;
+  // cout << "foo After: " << foo.area() << '\n';
+What will be displayed?
+
+Step 5
+Uncomment these two lines:
+  //Rectangle * p = TenTime(bar);
+  //cout << "After: " << p->area() << '\n';
+
+Implement a function named TenTime() which increases both width and height to 10 time as big.
+      In main(), call this function and then display its area again to see if TenTime() works as expected.
+
+*/
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+  private:
+    int width, height;
+  public:
+    Rectangle() {}
+    Rectangle (int x, int y) : width(x), height(y) {}
+    int area() {return width * height;}
+    friend void doubleIt(/*const*/ Rectangle&);
+};
+
+void doubleIt(/*const*/ Rectangle& param)
+{
+  param.width = param.width*2;
+  param.height = param.height*2;
+
+  return;
+}
+
+int main ()
+{
+  Rectangle bar (2,3);
+  cout << "Before: " << bar.area() << '\n';
+
+  doubleIt(bar);
+  cout << "After: " << bar.area() << '\n';
+
+  // Rectangle foo = bar;
+  // cout << "foo After: " << foo.area() << '\n';
+
+  //Rectangle * p = TenTime(bar);
+  //cout << "After: " << p->area() << '\n';
+
+  return 0;
+}
