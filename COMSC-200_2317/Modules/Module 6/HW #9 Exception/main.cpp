@@ -1,8 +1,10 @@
 #include <iomanip>
+#include <algorithm>
 #include <string>
 #include <vector>
 #include <iostream>
 #include <fstream>
+#include <sstream>
 using namespace std;
 
 struct Student
@@ -12,17 +14,18 @@ struct Student
   char gender;
 };
 
+void deleteBlanks(string &);
+string getName(string &);
+bool checkSSN(string);
+string getFirstThingy(string &);
+Student splitMeUp(string, string &);
+
 class StudentMgr
 {
   private:
     vector<Student> sList;
-    vector<int> temp;
 
-    string getSSN(string);
-    string getName(string);
-    string getGender(string);
-
-    void insertStudent(int, string, char);
+    void insertStudent(Student);
     void updateStudent(int, string, char);
     void deleteStudent(int);
 
@@ -39,6 +42,10 @@ class StudentMgr
 
 StudentMgr::StudentMgr()
 {
+  bool boo = true;
+  bool foo = true;
+  Student stud;
+  string funcCall;
   fstream inputFile;
   string fileName = "students.txt";
   string line;
@@ -46,41 +53,46 @@ StudentMgr::StudentMgr()
   inputFile.open(fileName);
   while (getline(inputFile, line))
   {
-    int len = line.length();
-
-    for (int i = 0; i < len; i++)
-    {
-      line[i] = tolower(line[i]);
-      if (!isalnum(line[i]) && line[i] != ' ')
+    boo = true;
+    do {
+      boo = false;
+      try
       {
-        line.erase(i,1);
-        len--;
-        i--;
+        stud = splitMeUp(line, funcCall);
       }
+      catch(string hmmNotThis)
+      {
+        cout << "Exception made for: " << hmmNotThis << endl;
+        getline(inputFile, line);
+        while (foo)
+        {
+          if (line == "\0" || line == "\n" || line == "\r") getline(inputFile, line);
+          else boo = false;
+        }
+        boo = true;
+      }
+    } while(boo);
+
+    if (funcCall == "i")
+    {
+      try { insertStudent(stud); }
+      catch(string hmmNotThis) { cout << hmmNotThis << endl; }
     }
-
-    if (tolower(line[0]) == 'i') insertStudent(ssn, name, gender);
-    else if (tolower(line[0]) == 'u') updateStudent(ssn, name, gender);
-    else if (tolower(line[0]) == 'd') deleteStudent(ssn);
+    else if (funcCall == "u")
+    {
+      try { updateStudent(stud.ssn, stud.name, stud.gender); }
+      catch(string hmmNotThis) { cout << hmmNotThis << endl; }
+    }
+    else if (funcCall == "d")
+    {
+      try { deleteStudent (stud.ssn); }
+      catch(string hmmNotThis) { cout << hmmNotThis << endl; }
+    }
+    getline(inputFile, line);
+    while (line == "\r" || line == "\n") { getline(inputFile, line); };
   }
+
   inputFile.close();
-
-
-
-
-  /// TO DO: Add your code here
-  ///
-  /// In each iteration of a while loop do the following:/
-  //       1. Use getline() to read one line of data in students.txt
-  ///      2. Use the code in parseString() to decompose the data tokens.
-  ///         And save the data tokens in alocal vector.(This is the vector sList.)
-  ///      3. Conduct an action. An action isone the following
-  ///         'I' -Insert the record. Use push_back to add the record to the end
-  ///         of thevectorsList.
-  ///         'U' -Update the record
-  ///         'D' -Delete the record
-  ///
-  ///  Sort the vector after all records are added.
 }
 
 StudentMgr::~StudentMgr()
@@ -88,57 +100,172 @@ StudentMgr::~StudentMgr()
 
 }
 
-string StudentMgr::getSSN (string line)
+Student splitMeUp(string splitMe, string &funcCall)
 {
-  s
+  Student stud;
+  string s;
+
+  deleteBlanks(splitMe);
+  s = getFirstThingy(splitMe);
+  funcCall = s;
+
+  deleteBlanks(splitMe);
+  s = getFirstThingy(splitMe);
+
+  bool isDigit = checkSSN(s);
+  if (isDigit) stud.ssn = stoi(s);
+  else
+  {
+    string hmmNotThis;
+    hmmNotThis = "Sorry pal, your ssn (" + s + ") isn't a valid int ):";
+    throw hmmNotThis;
+  }
+
+  deleteBlanks(splitMe);
+  s = getName(splitMe);
+  stud.name = s;
+
+  deleteBlanks(splitMe);
+  s = getFirstThingy(splitMe);
+  stud.gender = *s.c_str();
+
+  return stud;
 }
 
-void StudentMgr::insertStudent (int ssn, string ame, char gender)
+void deleteBlanks(string &deleteMe)
 {
-  /// TO DO: Add your code here
+  while (deleteMe[0] == ' ') deleteMe = deleteMe.substr(1);
 }
 
-void StudentMgr::updateStudent (int ssn, string ame,char gender)
+string getFirstThingy(string &token)
 {
-  /// TO DO: Add your code here
+  string head = "";
+  while (token[0] != ' ' && token[0] != '\0')
+  {
+    head = head + token.substr(0,1);
+    token = token.substr(1);
+  }
+  return head;
+}
+
+string getName(string &token)
+{
+  string head = "";
+  head = head + token.substr(0,1);
+  token = token.substr(1);
+  while (token[0] != '\"')
+  {
+    head = head + token.substr(0,1);
+    token = token.substr(1);
+  }
+  head = head + token.substr(0,1);
+  token = token.substr(1);
+  return head;
+}
+
+void StudentMgr::insertStudent (Student stud)
+{
+  int x = findStudentIndex(stud.ssn);
+
+  if (x == -1)
+  {
+    sList.push_back(stud);
+    sortBySSN();
+  }
+  else
+  {
+    string hmmNotThis;
+    hmmNotThis = "Uh oh buddy, " + to_string(stud.ssn) + " already existssss )):::";
+    throw hmmNotThis;
+  }
+}
+
+void StudentMgr::updateStudent (int ssn, string name, char gender)
+{
+  int x = findStudentIndex(ssn);
+  if (x != -1)
+  {
+    sList[x].ssn = ssn;
+    sList[x].name = name;
+    sList[x].gender = gender;
+  }
 }
 
 void StudentMgr::deleteStudent (int ssn)
 {
-  /// TO DO: Add your code here
+  int x = findStudentIndex(ssn);
+
+  if (x != -1) sList.erase(sList.begin() + x);
+  else
+  {
+    string hmmNotThis;
+    hmmNotThis = "Woah there human!!!, " + to_string(ssn) + " does NOOOT exiist!!!!! wooooo";
+    throw hmmNotThis;
+  }
 }
 
 void StudentMgr::displayStudent(int ssn)
 {
-  bool studentFound = false;
-  int x;
-  for (x = 0; x < sList.size() - 1; x++)
-  {
-    if (ssn == (sList.at(x)).ssn) studentFound = true;
-  }
-  if (studentFound) cout << (sList.at(x)).name << endl;
-  else cout << "Student not found" << endl;
+  int x = findStudentIndex(ssn);
+
+  cout << "Student sOCIaL SeCuRiTy nUMbEr: " << sList[x].ssn << endl;
+  cout << "Student Name: " << sList[x].name << endl;
+  cout << "Student g e n d e r: " << sList[x].gender << endl;
 }
 
 void StudentMgr::displayAll()
 {
-  for (int i = 0; i < sList.size() - 1; i++)
+  for(vector<Student>::iterator it=sList.begin(); it!=sList.end(); ++it)
   {
-    cout << (sList.at(i)).name << endl;
+      cout << "sOCIaL SeCuRiTy nUMbEr: " << it->ssn << endl;
+      cout << "Name: " << it->name << endl;
+      cout << "G e n d e R: " << it->gender << endl;
   }
 }
 
 int StudentMgr::findStudentIndex(int ssn)
 {
-  /// TO DO: Add your code here
-  /// Binary search should be conducted
-  /// If the record cannot be found, throw an integer -1 here to signal that
-  /// an exception has occurred.
+  //hi professor i haven't done binary search since comsc-110
+  //sorry if it's really bad
+
+  int leftSideIThink = 0; //???
+  int thisShouldProbabyBeTheRightSide = sList.size() - 1;
+
+  while (leftSideIThink <= thisShouldProbabyBeTheRightSide)
+  {
+    int currentValue = thisShouldProbabyBeTheRightSide - leftSideIThink;
+    currentValue /= 2;
+    currentValue += leftSideIThink;
+
+    if (sList[currentValue].ssn == ssn) // if we found gold!!!
+    {
+      return currentValue; //yeehaw;
+    }
+    if (sList[currentValue].ssn < ssn) leftSideIThink = currentValue + 1;
+    else thisShouldProbabyBeTheRightSide = currentValue - 1;
+  }
+
+  return -1; //this tells our other functions that we couldn't find it ):
+}
+
+bool ssnComparison(Student one, Student two)
+{
+  if (one.ssn > two.ssn) return true;
+  else return false;
 }
 
 void StudentMgr::sortBySSN()
 {
-  /// TO DO: Add your code here
+  sort(sList.begin(), sList.end(), ssnComparison);
+}
+
+bool checkSSN(string s)
+{
+  for (int banana = 0; banana < s.size(); banana++)
+  {
+    if (!isdigit(s[banana])) return false;
+  }
+  return true;
 }
 
 int main()
@@ -148,13 +275,13 @@ int main()
 
   do
   {
-    cout << endl << endl << "Select an option:" << endl;
-    cout << "-----------------" << endl << endl;
-
+    cout << endl << endl;
+    cout << "Select an option:"           << endl;
+    cout << "---------------------------" << endl;
     cout << "A. Display all student info" << endl;
     cout << "S. Display specific student" << endl;
-    cout << "Q. Quit the program" << endl;
-    cout << "--------------------------------" << endl;
+    cout << "Q. Quit the program"         << endl;
+    cout << "---------------------------" << endl;
     cout << "Enter selection: ";
     cin >> input;
     cin.clear();
@@ -164,9 +291,6 @@ int main()
     switch (input)
     {
       case 'a':
-        sm.displayAll();
-        //sm.sortBySSN();
-        cout << endl << endl << "sorted" << endl << endl;
         sm.displayAll();
         break;
       case 's':

@@ -29,12 +29,12 @@ void cleanText(vector <string> &vec, string line)
     }
   }
 
-  //stringstream stream(line);
+  stringstream stream(line);
 
   for (int i = 0; i < len; i++)
   {
-    //stream >> temp;
-    vec.push_back(line);
+    stream >> temp;
+    vec.push_back(temp);
     len = len - line.length();
   }
 }
