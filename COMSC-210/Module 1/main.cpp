@@ -3,6 +3,7 @@
 
 using namespace std;
 
+//employee structure with name, hours worked (5 values), $/hour, and total pay
 struct Employee
 {
   string name;
@@ -11,36 +12,30 @@ struct Employee
   double pay;
 };
 
+//function to initialize the array with user inputed values
 void initialize(Employee e[])
 {
-  string name;
-  double hours[5], rate;
   for (int i = 0; i < 4; i++)
   {
     cout << "Last name of employee #" << i + 1 << ": ";
-    cin >> name;
+    cin >> e[i].name;
     cout << "Hours worked on Monday: ";
-    cin >> hours[0];
+    cin >> e[i].hours[0];
     cout << "Hours worked on Tuesday: ";
-    cin >> hours[1];
+    cin >> e[i].hours[1];
     cout << "Hours worked on Wednesday: ";
-    cin >> hours[2];
+    cin >> e[i].hours[2];
     cout << "Hours worked on Thursday: ";
-    cin >> hours[3];
+    cin >> e[i].hours[3];
     cout << "Hours worked on Friday: ";
-    cin >> hours[4];
+    cin >> e[i].hours[4];
     cout << "Hourly rate of employee #" << i + 1 << ": ";
-    cin >> rate;
+    cin >> e[i].rate;
     cout << endl;
-    e[i].name = name;
-    e[i].rate = rate;
-    for (int j = 0; j < 5; j++)
-    {
-      e[i].hours[j] = hours[j];
-    }
   }
 }
 
+//compute total pay for employee
 void compute(Employee &e)
 {
   int baseHours = 0, overHours = 0;
@@ -56,6 +51,7 @@ void compute(Employee &e)
   e.pay = (baseHours * e.rate) + (overHours * (e.rate * 1.5));
 }
 
+//output the pay of the employee
 void result(Employee e)
 {
   cout << e.name << " payroll check ammount: $" << e.pay << endl;
